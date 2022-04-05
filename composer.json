@@ -1,0 +1,25 @@
+{
+    "name": "myjoyoo/moonframework",
+    "description": "a simple php framework.",
+    "type": "l",
+    "require": {
+        "php": ">=8.0"
+    },
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "myjoyoo",
+            "email": "myjoyoo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Moon\\": "src/Moon"
+        },
+        "files": [
+            "src/Helper/helper.php",
+            "src/Moon/Facade.php"
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+<?php
+declare(strict_types=1);
+
+return [
+    'app' => [
+        'env' => 'develop', // production
+        'name' => 'demo',
+    ],
+
+    'db' => [
+		'default' => [
+			'dbdsn' => 'mysql:dbname=test;host=localhost',
+			'dbuser' => 'root',
+			'dbpwd' => 'test',
+			'enable_slave' => false,
+		]
+    ],
+    
+    'view' => [
+        'themes' => 'default',
+        'vars' => []
+    ]
+];

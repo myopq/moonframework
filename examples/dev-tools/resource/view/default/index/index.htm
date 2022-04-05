@@ -1,0 +1,191 @@
+{subtemplate common/header}
+
+<script src="{assets static/js/jquery.json.js}"></script>
+<script src="{assets static/js/bignumber.min.js}"></script>
+<link rel="stylesheet" type="text/css" href="{assets static/css/font-awesome.min.css}" />
+<style>
+    form {
+        margin-block-end: 0em;
+    }
+    #content {
+        border: 0px;
+        width: 100%;
+        background-color: #fff;
+        outline:none;
+        padding: 10px;
+        height: 100px;
+    }
+
+    .fa { margin-left: 5px; margin-right: 2px;}
+    .txtResult { outline: none; border: 0px; padding: 3px 10px;}
+    .txtDateTime { width: 300px; }
+
+</style>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            you can input a few type string that like json timestamp, will auto detact it and en/decode.
+        </div>
+        <div class="panel-body" style="background-color: #fafafa;">
+            <form>
+                <textarea id="content" class="clickSel" placeholder="please input Json, Timestamp here..."></textarea>
+            </form>
+        </div>
+        <div class="panel-footer" id="resultTitle">Result:</div>
+        <div class="panel-body" id="result" style="background-color: #fafafa;">
+            <div id="jsonResult" class="result"></div>
+            <div id="timestampResult" class="result" style="display: none;">
+                current timestamp: <input type="text" class="clickSel txtResult" id="txtCurTimestamp" style="width: 124px;" />
+                current datetime: <input type="text" class="clickSel txtResult" id="txtCurDateTime" style="width: 300px;" />
+                <br />
+                <br />
+                <table class="table table-striped table-condensed">
+                    <caption>several format outputs:</caption>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Format</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>ISO</td>
+                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampISO" /></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Local DateTime</td>
+                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampLocal" /></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>yyyy-mm-dd hh:ii:ss</td>
+                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampYmdhis" /></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>GMT DateTime</td>
+                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampUTC" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div id="parseError" class="bg-danger result">
+
+            </div>
+        </div>
+      </div>
+</div>
+<script>
+    var timerCurrent = null;
+    $(function($) {
+        let expTimeStamp10 = RegExp("^16\\d{8}$")
+        console.log(expTimeStamp10.test('1600000000'))
+        $("#content").focus();
+
+        $(".clickSel").bind('focus',function() {
+            $(this).select();
+        })
+
+        $('#content').bind('input propertychange', function() {
+            onContentChanged()
+        })
+
+        $(".result").hide()
+        currentTime()
+        // timerCurrent = setInterval("currentTime()", 1000)
+    });
+
+    function onContentChanged() {
+        let content = document.getElementById('content').value;
+        let contentType = checkContentType(content)
+
+        if (contentType == 'unknown') {
+            return
+        }
+
+        switch (contentType) {
+            case 'json':
+                funJsonDecode(content)
+                break;
+            case 'url':
+                funJsonDecode(content)
+                break;
+            case 'timestamp':
+                funTimestampDecode(content)
+                break;
+            case 'datetime':
+                funJsonDecode(content)
+                break;
+            default:
+                break;
+        }
+    }
+
+    function checkContentType(content) {
+        let expTimeStamp10 = RegExp("^16\\d{8}$")
+        let expTimeStamp13 = RegExp("^16\\d{11}$")
+        let expUrl = RegExp("^https?:\/\/", "i")
+        let expJson = RegExp("^[\{\[]", "i");
+        let expDateTime = RegExp("^2\\d{3}\-\\d{2}\-\\d{2} \\d{2}:\\d{2}:\\d{2}$", "i");
+
+        let exps = [
+            {type: "timestamp", exp: expTimeStamp10},
+            {type: "timestamp", exp: expTimeStamp13},
+            {type: "url", exp: expUrl},
+            {type: "json", exp: expJson},
+            {type: "datetime", exp: expDateTime},
+        ];
+
+        for (const el of exps) {
+            if (el.exp.test(content)) {
+                return el.type
+            }
+        }
+        return 'unknown'
+    }
+
+    function funJsonDecode(content) {
+        try {
+            $(".result").hide()
+            let json = JSON.parse(content);
+            // $("#jsonResult").JSONView(json);
+            let result = new JSONFormat(content, 4).toString()
+            console.log(result)
+            $("#jsonResult").html(result)
+            $("#jsonResult").show()
+        } catch (error) {
+            parseError(error.message)
+            console.log(error)
+        }
+    }
+
+    function funTimestampDecode(content) {
+        if (content.length == 13) {
+            content = content.substr(0, 10)
+        }
+
+        var dateObj = new Date()
+        dateObj.setTime(content * 1000)
+        $("#txtTimestampISO").val(dateObj.toISOString());
+        $("#txtTimestampLocal").val(dateObj.toLocaleString());
+        $("#txtTimestampYmdhis").val(dateObj.format('yyyy-MM-dd hh:mm:ss'));
+        $("#txtTimestampUTC").val(dateObj.toUTCString());
+        $("#timestampResult").show()
+        console.log('sdfsdf')
+    }
+
+    function currentTime() {
+        // clearInterval(timerCurrent)
+        $("#txtCurTimestamp").val(Math.round(new Date() / 1000))
+        $("#txtCurDateTime").val(new Date().toISOString())
+    }
+
+    function parseError(str) {
+        $("#parseError").html(str)
+        $("#parseError").show()
+    }
+</script>
+{template common/footer}
