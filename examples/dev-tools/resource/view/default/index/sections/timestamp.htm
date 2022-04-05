@@ -1,0 +1,88 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Get current timestamp in some programes</div>
+    <div class="panel-body">
+<p>Get timestamp in swift</p>
+<pre>NSDate().timeIntervalSince1970</pre>
+
+<p>Get timestamp in Go lang</p>
+<pre>
+import ( "time")
+int32(time.Now().Unix())
+</pre>
+
+<p>Get timestamp in Java</p>
+<pre>
+// in pure java
+(int) (System.currentTimeMillis() / 1000)
+
+// in joda
+(int) (DateTime.now().getMillis() / 1000)
+</pre>
+
+<p>Get timestamp in JavaScript</p>
+<pre>	
+Math.round(new Date() / 1000)
+</pre>
+
+<p>Get timestamp in Objective-C</p>
+<pre>
+[[NSDate date] timeIntervalSince1970]
+</pre>
+
+<p>Get timestamp in MySQL</p>
+<pre>
+SELECT unix_timestamp(now())
+</pre>
+
+<p>Get timestamp in SQLite</p>
+<pre>
+SELECT strftime('%s', 'now')
+</pre>
+
+<p>Get timestamp in Erlang</p>
+<pre>
+calendar:datetime_to_gregorian_seconds(calendar:universal_time())-719528*24*3600.
+</pre>
+
+<p>Get timestamp in PHP</p>
+<pre>
+// pure php
+time()
+
+// Carbon\Carbon
+Carbon::now()->timestamp
+</pre>
+
+<p>Get timestamp in Python</p>
+<pre>
+import time
+time.time()
+</pre>
+
+<p>Get timestamp in Ruby</p>
+<pre>
+Time.now.to_i
+</pre>
+
+<p>Get timestamp in Shell</p>
+<pre>
+date +%s
+</pre>
+
+<p>Get timestamp in Groovy</p>
+<pre>
+(new Date().time / 1000).intValue()
+</pre>
+
+<p>Get timestamp in Lua</p>
+<pre>
+os.time()
+</pre>
+
+<p>Get timestamp in .NET/C#</p>
+<pre>
+(DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000
+</pre>
+
+    </div>
+</div>
