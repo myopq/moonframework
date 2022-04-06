@@ -26,6 +26,11 @@
         <div class="panel-heading">
             <p>hello, you can input a few type string that like <kbd>json</kbd> <kbd>timestamp</kbd>, will auto detect it and en/decode.</p>
             <p>more function is building.</p>
+            <br />
+            <p>
+                current timestamp: <input type="text" class="clickSel txtResult" id="txtCurTimestamp" style="width: 124px;" />
+                current datetime: <input type="text" class="clickSel txtResult" id="txtCurDateTime" style="width: 300px;" />
+            </p>
         </div>
         <div class="panel-body" style="background-color: #fafafa;">
             <form>
@@ -36,9 +41,6 @@
         <div class="panel-body" id="result" style="background-color: #fafafa;">
             <div id="jsonResult" class="result"></div>
             <div id="timestampResult" class="result" style="display: none;">
-                current timestamp: <input type="text" class="clickSel txtResult" id="txtCurTimestamp" style="width: 124px;" />
-                current datetime: <input type="text" class="clickSel txtResult" id="txtCurDateTime" style="width: 300px;" />
-                <br />
                 <br />
                 <table class="table table-striped table-condensed">
                     <caption>several format outputs:</caption>
