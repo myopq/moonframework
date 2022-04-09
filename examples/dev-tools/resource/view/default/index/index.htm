@@ -2,6 +2,7 @@
 
 <script src="{assets static/js/jquery.json.js}"></script>
 <script src="{assets static/js/bignumber.min.js}"></script>
+<script src="{assets static/js/clipboard.min.js}"></script>
 <link rel="stylesheet" type="text/css" href="{assets static/css/font-awesome.min.css}" />
 <style>
     form {
@@ -21,6 +22,7 @@
     .txtDateTime { width: 300px; }
 
 </style>
+
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -37,8 +39,42 @@
                 <textarea id="content" class="clickSel" placeholder="please input Json, Timestamp here..."></textarea>
             </form>
         </div>
-        <div class="panel-footer" id="resultTitle">Result:</div>
+        <div class="panel-footer" id="resultTitle">
+            <div class="row">
+                <div class="col-md-1" style="line-height: 40px;">Result</div>
+                <div class="col-md-11"><div class="sharethis-inline-share-buttons"></div></div>
+            </div>
+            
+            
+        </div>
+        
         <div class="panel-body" id="result" style="background-color: #fafafa;">
+            <div class="btn-toolbar" style="margin-bottom: 10px;" role="toolbar">
+                <!-- <div class="btn-group toolbar-json"> -->
+                    <button type="button" data-clipboard-target="#jsonResult" class="btn btn-default btn-copy" aria-label="Copy">
+                        <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+                        Copy
+                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-collapse" aria-label="Collapse">
+                            <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span>
+                            Collapse
+                        </button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Collapse Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="btn-toggle2"><a href="#">Collapse 2</a></li>
+                            <li class="btn-toggle3"><a href="#">Collapse 3</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-default btn-expand" aria-label="Expand">
+                        <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+                        Expand
+                    </button>
+                <!-- </div> -->
+            </div>
             <div id="jsonResult" class="result"></div>
             <div id="timestampResult" class="result" style="display: none;">
                 <br />
@@ -85,6 +121,7 @@
 </div>
 <script>
     var timerCurrent = null;
+    var isJsonExpanded = true;
     $(function($) {
         let expTimeStamp10 = RegExp("^16\\d{8}$")
         console.log(expTimeStamp10.test('1600000000'))
@@ -98,13 +135,41 @@
             onContentChanged()
         })
 
+        $(".btn-collapse").bind("click", function() {
+            if (!isJsonExpanded) return
+            isJsonExpanded = false
+            $($(".fa-minus-square-o").toArray().reverse()).click();
+        })
+
+        $(".btn-expand").bind("click", function() {
+            isJsonExpanded = true
+            expand()
+        })
+
+        $(".btn-toggle2").bind("click", function() {
+            collapse(2);
+        })
+        $(".btn-toggle3").bind("click", function() {
+            collapse(3);
+        })
+
         $(".result").hide()
         currentTime()
+        var clipboard = new ClipboardJS('.btn-copy');
         // timerCurrent = setInterval("currentTime()", 1000)
     });
 
+    function collapse(indent) {
+        $(".fa-iden"+indent).click()
+    }
+    function expand() {
+        while ($(".fa-plus-square-o").length > 0) {
+            $(".fa-plus-square-o").click();
+        }
+    }
+
     function onContentChanged() {
-        let content = document.getElementById('content').value;
+        let content = document.getElementById('content').value.trim();
         let contentType = checkContentType(content)
 
         if (contentType == 'unknown') {
@@ -156,14 +221,11 @@
         try {
             $(".result").hide()
             let json = JSON.parse(content);
-            // $("#jsonResult").JSONView(json);
             let result = new JSONFormat(content, 4).toString()
-            console.log(result)
             $("#jsonResult").html(result)
             $("#jsonResult").show()
         } catch (error) {
             parseError(error.message)
-            console.log(error)
         }
     }
 

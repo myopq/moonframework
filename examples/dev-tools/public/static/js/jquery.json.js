@@ -67,7 +67,7 @@ var JSONFormat = (function(){
         for(var i = 0, size = object.length; i < size; ++i){
             tmp_array.push(indent_tab(indent_count) + format(object[i], indent_count + 1));
         }
-        return '<span data-type="array" data-size="' + tmp_array.length + '"><i  style="cursor:pointer;" class="fa fa-minus-square-o" onclick="hide(this)"></i>[<br/>'
+        return '<span data-type="array" data-size="' + tmp_array.length + '"><i  style="cursor:pointer;" class="fa fa-minus-square-o fa-iden-'+indent_count+'" onclick="hide(this)"></i>[<br/>'
             + tmp_array.join(',<br/>')
             + '<br/>' + indent_tab(indent_count - 1) + ']</span>';
     }
@@ -78,7 +78,7 @@ var JSONFormat = (function(){
             var keyRe = key.replace('jsondotcnprefixyxp', '');
             tmp_array.push( indent_tab(indent_count) + '<span class="json_key" contenteditable="true">"' + keyRe + '"</span>:' +  format(object[key], indent_count + 1));
         }
-        return '<span  data-type="object"><i  style="cursor:pointer;" class="fa fa-minus-square-o" onclick="hide(this)"></i>{<br/>'
+        return '<span  data-type="object"><i  style="cursor:pointer;" class="fa fa-minus-square-o fa-iden' + indent_count + '" onclick="hide(this)"></i>{<br/>'
             + tmp_array.join(',<br/>')
             + '<br/>' + indent_tab(indent_count - 1) + '}</span>';
     }
@@ -160,26 +160,9 @@ var JSONFormat = (function(){
 
 })();
 var last_html = '';
-// function hide(obj){
-//     var data_type = obj.parentNode.getAttribute('data-type');
-//     var data_size = obj.parentNode.getAttribute('data-size');
-//     obj.parentNode.setAttribute('data-inner',obj.parentNode.innerHTML);
-//     if (data_type === 'array') {
-//         obj.parentNode.innerHTML = '<i  style="cursor:pointer;" class="fa fa-plus-square-o" onclick="show(this)"></i>Array[<span class="json_number">' + data_size + '</span>]';
-//     }else{
-//         obj.parentNode.innerHTML = '<i  style="cursor:pointer;" class="fa fa-plus-square-o" onclick="show(this)"></i>Object{...}';
-//     }
-//
-// }
-//
-// function show(obj){
-//     var innerHtml = obj.parentNode.getAttribute('data-inner');
-//     obj.parentNode.innerHTML = innerHtml;
-// }
 function hide(obj){
     var data_type = obj.parentNode.getAttribute('data-type');
     var data_size = obj.parentNode.getAttribute('data-size');
-    // obj.parentNode.setAttribute('data-inner',obj.parentNode.innerHTML);
     $(obj).parent().hide();
     var span = document.createElement('span');
     span.className = 'custom-plus';
@@ -194,9 +177,6 @@ function hide(obj){
 }
 
 function show(obj){
-    // var innerHtml = obj.parentNode.getAttribute('data-inner');
-    // $(obj).parent().attr('data-inner', '');
-    // obj.parentNode.innerHTML = innerHtml;
     $(obj).parent().next().show();
     $(obj).parent().remove()
 }
