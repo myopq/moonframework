@@ -1,0 +1,31 @@
+<script>
+class UrlDeParser extends EndecodeParser {
+    constructor(content) {
+        super()
+        this.content = content
+        this.name = "UrlDecode"
+    }
+
+    isMatch() {
+        let exp = RegExp("^http", "i")
+        if (exp.test(this.content)) {
+            if (this.content != decodeURIComponent(this.content)) {
+                return true
+            }
+            return false
+        }
+        return false
+    }
+
+    do() {
+        this.reset()
+        $("#urlTxtResult").val(decodeURIComponent(this.content))
+        $("#urlResult").show()
+    }
+}
+</script>
+
+<div id="urlResult" class="result" style="display: none;">
+    <br />
+    <input type="text" class="clickSel txtResult" style="width: 100%;" id="urlTxtResult" />
+</div>

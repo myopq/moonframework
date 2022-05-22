@@ -1,8 +1,10 @@
 {subtemplate common/header}
 
-<script src="{assets static/js/jquery.json.js}"></script>
-<script src="{assets static/js/bignumber.min.js}"></script>
-<script src="{assets static/js/clipboard.min.js}"></script>
+<script async="async" src="{assets static/js/jquery.json.js}"></script>
+<script async="async" src="{assets static/js/bignumber.min.js}"></script>
+<script async="async" src="{assets static/js/clipboard.min.js}"></script>
+<script async="async" src="{assets static/js/EndecodeParser.js}"></script>
+<!-- <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 <link rel="stylesheet" type="text/css" href="{assets static/css/font-awesome.min.css}" />
 <style>
     form {
@@ -26,7 +28,7 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <p>hello, you can input a few type string that like <kbd>json</kbd> <kbd>timestamp</kbd>, will auto detect it and en/decode.</p>
+            <p>hello, you can input a few type string that like <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, will auto detect it and en/decode.</p>
             <p>more function is building.</p>
             <br />
             <p>
@@ -39,6 +41,9 @@
                 <textarea id="content" class="clickSel" placeholder="please input Json, Timestamp here..."></textarea>
             </form>
         </div>
+        <div class="panel-body" id="parser-menu">
+            <button class="btn btn-default" type="submit" data-name="">Button</button>
+        </div>
         <div class="panel-footer" id="resultTitle">
             <div class="row">
                 <div class="col-md-1" style="line-height: 40px;">Result</div>
@@ -49,70 +54,10 @@
         </div>
         
         <div class="panel-body" id="result" style="background-color: #fafafa;">
-            <div id="jsonResultWpr" class="result" style="display: none;">
-                <div class="btn-toolbar" style="margin-bottom: 10px;" role="toolbar">
-                    <button type="button" data-clipboard-target="#jsonResult" class="btn btn-default btn-copy" aria-label="Copy">
-                        <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
-                        Copy
-                    </button>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default btn-collapse" aria-label="Collapse">
-                            <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span>
-                            Collapse
-                        </button>
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Collapse Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="btn-toggle2"><a href="#">Collapse 2</a></li>
-                            <li class="btn-toggle3"><a href="#">Collapse 3</a></li>
-                        </ul>
-                    </div>
-                    <button type="button" class="btn btn-default btn-expand" aria-label="Expand">
-                        <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
-                        Expand
-                    </button>
-                </div>
-                <div id="jsonResult">
-
-                </div>
-            </div>
-            <div id="timestampResult" class="result" style="display: none;">
-                <br />
-                <table class="table table-striped table-condensed">
-                    <caption>several format outputs:</caption>
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Format</th>
-                        <th>Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>ISO</td>
-                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampISO" /></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Local DateTime</td>
-                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampLocal" /></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>yyyy-mm-dd hh:ii:ss</td>
-                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampYmdhis" /></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>GMT DateTime</td>
-                        <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampUTC" /></td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
+            {template parsers/TimestampParser}
+            {template parsers/UrlDeParser}
+            {template parsers/UrlEnParser}
+            {template parsers/JsonParser}
             <div id="parseError" class="bg-danger result">
 
             </div>
@@ -124,9 +69,15 @@
 <script>
     var timerCurrent = null;
     var isJsonExpanded = true;
+
+    var parsers = [
+        new JsonParser(),
+        new TimestampParser(),
+        new UrlDeParser(),
+        new UrlEnParser(),
+    ];
+
     $(function($) {
-        let expTimeStamp10 = RegExp("^16\\d{8}$")
-        console.log(expTimeStamp10.test('1600000000'))
         $("#content").focus();
 
         $(".clickSel").bind('focus',function() {
@@ -137,28 +88,10 @@
             onContentChanged()
         })
 
-        $(".btn-collapse").bind("click", function() {
-            if (!isJsonExpanded) return
-            isJsonExpanded = false
-            $($(".fa-minus-square-o").toArray().reverse()).click();
-        })
-
-        $(".btn-expand").bind("click", function() {
-            isJsonExpanded = true
-            expand()
-        })
-
-        $(".btn-toggle2").bind("click", function() {
-            collapse(2);
-        })
-        $(".btn-toggle3").bind("click", function() {
-            collapse(3);
-        })
-
         $(".result").hide()
         currentTime()
         var clipboard = new ClipboardJS('.btn-copy');
-        // timerCurrent = setInterval("currentTime()", 1000)
+        // initParserMenu()
     });
 
     function collapse(indent) {
@@ -172,82 +105,35 @@
 
     function onContentChanged() {
         let content = document.getElementById('content').value.trim();
-        let contentType = checkContentType(content)
 
-        if (contentType == 'unknown') {
-            return
-        }
-
-        switch (contentType) {
-            case 'json':
-                funJsonDecode(content)
-                break;
-            case 'url':
-                funJsonDecode(content)
-                break;
-            case 'timestamp':
-                funTimestampDecode(content)
-                break;
-            case 'datetime':
-                funJsonDecode(content)
-                break;
-            default:
-                break;
-        }
-    }
-
-    function checkContentType(content) {
-        let expTimeStamp10 = RegExp("^16\\d{8}$")
-        let expTimeStamp13 = RegExp("^16\\d{11}$")
-        let expUrl = RegExp("^https?:\/\/", "i")
-        let expJson = RegExp("^[\{\[]", "i");
-        let expDateTime = RegExp("^2\\d{3}\-\\d{2}\-\\d{2} \\d{2}:\\d{2}:\\d{2}$", "i");
-
-        let exps = [
-            {type: "timestamp", exp: expTimeStamp10},
-            {type: "timestamp", exp: expTimeStamp13},
-            {type: "url", exp: expUrl},
-            {type: "json", exp: expJson},
-            {type: "datetime", exp: expDateTime},
-        ];
-
-        for (const el of exps) {
-            if (el.exp.test(content)) {
-                return el.type
+        for (const parser of parsers) {
+            parser.setContent(content)
+            if (parser.isMatch()) {
+                parser.do()
+                parser.setCurrent()
+                break
             }
         }
-        return 'unknown'
     }
 
-    function funJsonDecode(content) {
-        try {
-            $(".result").hide()
-            let json = JSON.parse(content);
-            let result = new JSONFormat(content, 4).toString()
-            $("#jsonResult").html(result)
-            $("#jsonResultWpr").show()
-        } catch (error) {
-            parseError(error.message)
-        }
-    }
-
-    function funTimestampDecode(content) {
-        if (content.length == 13) {
-            content = content.substr(0, 10)
+    function initParserMenu() {
+        let html = ""
+        $("#parser-menu").html('')
+        for (const parser of parsers) {
+            let tmp = '<button class="btn '; //' type="submit" data-name="">Button</button>'
+            if (parser.isCurrent()) {
+                tmp += 'btn-primary'
+            } else {
+                tmp += 'btn-default'
+            }
+            tmp += '" type="button" data-name="' + parser.getParserName() + '">' + parser.getParserName() + '</button>'
+            html += tmp
         }
 
-        var dateObj = new Date()
-        dateObj.setTime(content * 1000)
-        $("#txtTimestampISO").val(dateObj.toISOString());
-        $("#txtTimestampLocal").val(dateObj.toLocaleString());
-        $("#txtTimestampYmdhis").val(dateObj.format('yyyy-MM-dd hh:mm:ss'));
-        $("#txtTimestampUTC").val(dateObj.toUTCString());
-        $("#timestampResult").show()
-        console.log('sdfsdf')
+        $("#parser-menu").html(html)
     }
 
     function currentTime() {
-        // clearInterval(timerCurrent)
         $("#txtCurTimestamp").val(Math.round(new Date() / 1000))
         $("#txtCurDateTime").val(new Date().toISOString())
     }

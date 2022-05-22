@@ -1,0 +1,80 @@
+<script>
+class JsonParser extends EndecodeParser {
+    constructor(content = "") {
+        super()
+        this.content = content
+        this.name = "JsonViewer"
+    }
+    
+    isMatch() {
+        let exp = RegExp("^[\{\[]", "i");
+        if (exp.test(this.content)) {
+            return true
+        }
+        return false
+    }
+
+    do(enOrDe = 'de') {
+        this.reset()
+        try {
+            let json = JSON.parse(this.content);
+            let result = new JSONFormat(this.content, 4).toString()
+            $("#jsonResult").html(result)
+            $("#jsonResultWpr").show()
+        } catch (error) {
+            parseError(error.message)
+        }
+    }
+}
+
+$(function($) {
+    $(".btn-collapse").bind("click", function() {
+        if (!isJsonExpanded) return
+        isJsonExpanded = false
+        $($(".fa-minus-square-o").toArray().reverse()).click();
+    })
+
+    $(".btn-expand").bind("click", function() {
+        isJsonExpanded = true
+        expand()
+    })
+
+    $(".btn-toggle2").bind("click", function() {
+        collapse(2);
+    })
+    $(".btn-toggle3").bind("click", function() {
+        collapse(3);
+    })
+});
+
+</script>
+
+<div id="jsonResultWpr" class="result" style="display: none;">
+    <div class="btn-toolbar" style="margin-bottom: 10px;" role="toolbar">
+        <button type="button" data-clipboard-target="#jsonResult" class="btn btn-default btn-copy" aria-label="Copy">
+            <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+            Copy
+        </button>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default btn-collapse" aria-label="Collapse">
+                <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span>
+                Collapse
+            </button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Collapse Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="btn-toggle2"><a href="#">Collapse 2</a></li>
+                <li class="btn-toggle3"><a href="#">Collapse 3</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default btn-expand" aria-label="Expand">
+            <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+            Expand
+        </button>
+    </div>
+    <div id="jsonResult">
+
+    </div>
+</div>

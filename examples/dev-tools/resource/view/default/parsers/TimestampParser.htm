@@ -1,0 +1,71 @@
+<script>
+class TimestampParser extends EndecodeParser {
+    constructor(content) {
+        super()
+        this.content = content
+        this.name = "Timestamp"
+    }
+
+    isMatch() {
+        let expTimeStamp10 = RegExp("^16\\d{8}$")
+        let expTimeStamp13 = RegExp("^16\\d{11}$")
+        if (expTimeStamp10.test(this.content) || 
+            expTimeStamp13.test(this.content)) {
+            return true
+        }
+        return false
+    }
+
+    do() {
+        this.reset()
+        let _content = this.content
+        if (this.content.length == 13) {
+            _content = this.content.substr(0, 10)
+        }
+
+        var dateObj = new Date()
+        dateObj.setTime(_content * 1000)
+        $("#txtTimestampISO").val(dateObj.toISOString());
+        $("#txtTimestampLocal").val(dateObj.toLocaleString());
+        $("#txtTimestampYmdhis").val(dateObj.format('yyyy-MM-dd hh:mm:ss'));
+        $("#txtTimestampUTC").val(dateObj.toUTCString());
+        $("#timestampResult").show()
+    }
+}
+</script>
+
+<div id="timestampResult" class="result" style="display: none;">
+    <br />
+    <table class="table table-striped table-condensed">
+        <caption>several format outputs:</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Format</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>ISO</td>
+            <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampISO" /></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Local DateTime</td>
+            <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampLocal" /></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>yyyy-mm-dd hh:ii:ss</td>
+            <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampYmdhis" /></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>GMT DateTime</td>
+            <td><input type="text" class="clickSel txtResult txtDateTime" id="txtTimestampUTC" /></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

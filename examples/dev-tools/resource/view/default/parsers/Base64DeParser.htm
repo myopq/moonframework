@@ -1,0 +1,31 @@
+<script>
+    class Base64DeParser extends EndecodeParser {
+        constructor(content) {
+            super()
+            this.content = content
+            this.name = "Base64 Decode"
+        }
+    
+        isMatch() {
+            // CryptoJS.enc.Base64
+            if (exp.test(this.content)) {
+                if (this.content != decodeURIComponent(this.content)) {
+                    return true
+                }
+                return false
+            }
+            return false
+        }
+    
+        do() {
+            this.reset()
+            $("#base64TxtResult").val(decodeURIComponent(this.content))
+            $("#base64Result").show()
+        }
+    }
+    </script>
+    
+    <div id="base64Result" class="result" style="display: none;">
+        <br />
+        <textarea class="clickSel txtResult" style="width: 100%;" id="base64TxtResult"></textarea>
+    </div>
