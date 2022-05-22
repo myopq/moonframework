@@ -11,9 +11,10 @@ if (empty($argv[1])) {
 }
 
 /**
- * 命令格式
- * -h10.11.11.11 或 -h 11.1.1.1 这是短格式
- * --user=abc这是长格式
+ * command have 3 formats
+ * -h10.11.11.11
+ * -h 11.1.1.1
+ * --user=abc
  */
 $cmdArgs = CommandParser::parseArgs();
 
