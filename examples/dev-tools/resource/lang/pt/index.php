@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decodificar ferramentas online - Ferramentas de desenvolvimento', 
+    'site_description' => 'Dev-Tools, uma coleção de ferramentas online que codificam/decodificam automaticamente: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Linguagem', 
+    'welcome' => 'Olá, você pode inserir algumas strings de tipo como <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, irá detectá-lo automaticamente e en/decodificar.', 
+    'more_function' => 'mais função está construindo.', 
+    'current_ts' => 'carimbo de data/hora atual', 
+    'current_dt' => 'data e hora atual', 
+    'input_hint' => 'insira Json, carimbo de data/hora, URL aqui ...', 
+    'result' => 'Resultado', 
+    'several_format_outputs' => 'Várias saídas de formato:', 
+    'Format' => 'Formato', 
+    'Value' => 'Valor', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Local DateTime', 
+    'GMT_DateTime' => 'GMT DataHora', 
+    'Copy' => 'cópia de', 
+    'Collapse' => 'Colapso', 
+    'Collapse_Dropdown' => 'Recolher lista suspensa', 
+    'Collapse_2' => 'Recolher 2', 
+    'Collapse_3' => 'Recolher 3', 
+    'Expand' => 'Expandir', 
+
+];

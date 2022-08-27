@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decodeer online tools - Ontwikkeltools', 
+    'site_description' => 'Dev-Tools, een verzameling online tools die automatisch en/decoderen: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Taal', 
+    'welcome' => 'hallo, je kunt een paar tekenreeksen invoeren die, zoals <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, deze automatisch detecteren en en/decoderen.', 
+    'more_function' => 'er wordt meer functie gebouwd.', 
+    'current_ts' => 'huidige tijdstempel', 
+    'current_dt' => 'huidige datumtijd', 
+    'input_hint' => 'voer Json, Tijdstempel, Url hier in...', 
+    'result' => 'Resultaat', 
+    'several_format_outputs' => 'Verschillende formaat uitgangen:', 
+    'Format' => 'Formaat', 
+    'Value' => 'Waarde', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Lokale DatumTijd', 
+    'GMT_DateTime' => 'GMT DatumTijd', 
+    'Copy' => 'Kopiëren', 
+    'Collapse' => 'Instorten', 
+    'Collapse_Dropdown' => 'Vervolgkeuzelijst samenvouwen', 
+    'Collapse_2' => 'Samenvouwen 2', 
+    'Collapse_3' => 'Samenvouwen 3', 
+    'Expand' => 'Uitbreiden', 
+
+];

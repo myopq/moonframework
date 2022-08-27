@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame tr/çevrimiçi araçların kodunu çöz - Araç Geliştirme', 
+    'site_description' => 'Dev-Tools, otomatik olarak kodlayan/çözen çevrimiçi araçlar koleksiyonu: json ayrıştırıcı, url en/kod çözme, zaman damgası dönüştürme...', 
+    'language' => 'Dil', 
+    'welcome' => 'merhaba, <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd> gibi, otomatik olarak algılayacak ve kodunu çözecek birkaç tür dize girebilirsiniz.', 
+    'more_function' => 'daha fazla işlev inşa ediyor.', 
+    'current_ts' => 'Geçerli zaman dalgası', 
+    'current_dt' => 'geçerli tarihsaat', 
+    'input_hint' => 'buraya Json, Timestamp, Url\'yi girin...', 
+    'result' => 'Sonuç', 
+    'several_format_outputs' => 'Birkaç format çıktısı:', 
+    'Format' => 'Biçim', 
+    'Value' => 'Değer', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Yerel TarihSaat', 
+    'GMT_DateTime' => 'GMT TarihSaat', 
+    'Copy' => 'kopyala', 
+    'Collapse' => 'Yıkılmak', 
+    'Collapse_Dropdown' => 'Açılır Menüyü Daralt', 
+    'Collapse_2' => '2\'yi daralt', 
+    'Collapse_3' => '3\'ü daralt', 
+    'Expand' => 'Genişletmek', 
+
+];

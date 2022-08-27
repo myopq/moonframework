@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<header>
+    <title>xxx</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body>
+    <div>{$tips}</div>
+    <form action="" method="post">
+        源语言:
+        <select name="filename_from">
+            {loop $langs $lang}
+            {if $lang['file'] == 'en'}
+            {loop $lang['files'] $file}
+            <option value="{$file['path']}" {if $filename_from==$file['path']}selected{/if}>{$lang['file']} - {$file['file']}</option>
+            {/loop}
+            {/if}
+            {/loop}
+        </select>
+        
+
+        <input name="btnSelectFile" value="SelectFile" type="submit" />
+        <hr />
+        原内容:<br />
+        {if !empty($langVars)}
+        <textarea style="width: 50%; height:200px;">{loop $langVars $var}
+{$var}
+
+{/loop}</textarea>
+        <br />
+        <hr />
+        输入翻译内容:<br />
+        <textarea style="width: 50%; height:200px;" name="newContent">{if !empty($newContentStr)}{$newContentStr}{/if}</textarea>
+        <br />
+        <input name="Review" value="Review" type="submit" />
+
+
+        <br />
+        {if !empty($result)}
+        <hr />预览:<br />
+        <textarea style="width: 100%; height:500px;" name="areaReview">{$result}</textarea>
+        <br />
+        目的语言:
+        <select name="lang_to">
+            {loop $langs $lang}
+            {if $lang['file'] != 'en'}
+            <option value="{$lang['path']}" {if $lang_to==$lang['path']}selected{/if}>{$lang['file']}</option>
+            {/if}
+            {/loop}
+        </select>
+        <br />
+        <input name="Save" value="Save" type="submit" />
+        {/if}
+        {/if}
+        
+    </form>
+</body>
+</html>

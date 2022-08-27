@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en / decodificar herramientas en línea - Herramientas de desarrollo', 
+    'site_description' => 'Dev-Tools, una colección de herramientas en línea que codifican/decodifican automáticamente: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Idioma', 
+    'welcome' => 'hola, puede ingresar algunos tipos de cadenas que, como <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, lo detectarán automáticamente y lo codificarán/descifrarán.', 
+    'more_function' => 'se está construyendo más función.', 
+    'current_ts' => 'fecha y hora actual', 
+    'current_dt' => 'fecha y hora actual', 
+    'input_hint' => 'ingrese Json, marca de tiempo, URL aquí ...', 
+    'result' => 'Resultado', 
+    'several_format_outputs' => 'Varias salidas de formato:', 
+    'Format' => 'Formato', 
+    'Value' => 'Valor', 
+    'ISO' => 'YO ASI', 
+    'Local_DateTime' => 'Fecha y hora local', 
+    'GMT_DateTime' => 'Fecha y hora GMT', 
+    'Copy' => 'Copiar', 
+    'Collapse' => 'Colapsar', 
+    'Collapse_Dropdown' => 'Contraer menú desplegable', 
+    'Collapse_2' => 'Contraer 2', 
+    'Collapse_3' => 'Contraer 3', 
+    'Expand' => 'Expandir', 
+
+];

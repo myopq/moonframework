@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timetam en/decode online-værktøjer - Udvikle værktøjer', 
+    'site_description' => 'Dev-Tools, en samling onlineværktøjer, der automatisk en/dekoder: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Sprog', 
+    'welcome' => 'hej, du kan indtaste et par typer strenge, som f.eks. <kbd>json</kbd> <kbd>tidsstempel</kbd>, <kbd>url en/decode</kbd>, vil automatisk finde den og en/decode.', 
+    'more_function' => 'mere funktion bygger.', 
+    'current_ts' => 'nuværende tidsstempel', 
+    'current_dt' => 'nuværende datotid', 
+    'input_hint' => 'indtast Json, tidsstempel, URL her...', 
+    'result' => 'Resultat', 
+    'several_format_outputs' => 'Flere formatudgange:', 
+    'Format' => 'Format', 
+    'Value' => 'Værdi', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Lokal DatoTid', 
+    'GMT_DateTime' => 'GMT DatoTid', 
+    'Copy' => 'Kopi', 
+    'Collapse' => 'Bryder sammen', 
+    'Collapse_Dropdown' => 'Skjul dropdown', 
+    'Collapse_2' => 'Collapse 2', 
+    'Collapse_3' => 'Kollaps 3', 
+    'Expand' => 'Udvide', 
+
+];

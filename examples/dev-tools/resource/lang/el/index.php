@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Online εργαλεία Auto Json, Url, Timestame en/decode - Develop Tools', 
+    'site_description' => 'Dev-Tools, μια συλλογή διαδικτυακών εργαλείων που αυτόματα en/αποκωδικοποιούν: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Γλώσσα', 
+    'welcome' => 'Γεια σας, μπορείτε να εισαγάγετε μια συμβολοσειρά τύπων που όπως <kbd>json</kbd> <kbd>χρονοσήμανση</kbd>, <kbd>url en/decode</kbd>, θα την ανιχνεύει αυτόματα και θα την αποκωδικοποιεί.', 
+    'more_function' => 'περισσότερη λειτουργία χτίζει.', 
+    'current_ts' => 'τρέχουσα χρονική σήμανση', 
+    'current_dt' => 'τρέχουσα ώρα ημερομηνίας', 
+    'input_hint' => 'Εισαγάγετε Json, Timestamp, Url εδώ...', 
+    'result' => 'Αποτέλεσμα', 
+    'several_format_outputs' => 'Πολλές εξόδους μορφής:', 
+    'Format' => 'Μορφή', 
+    'Value' => 'αξία', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Τοπική Ημερομηνία Ώρα', 
+    'GMT_DateTime' => 'Ημερομηνία ώρας GMT', 
+    'Copy' => 'αντίγραφο', 
+    'Collapse' => 'Κατάρρευση', 
+    'Collapse_Dropdown' => 'Σύμπτυξη αναπτυσσόμενου μενού', 
+    'Collapse_2' => 'Σύμπτυξη 2', 
+    'Collapse_3' => 'Σύμπτυξη 3', 
+    'Expand' => 'Επεκτείνουν', 
+
+];

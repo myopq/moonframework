@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json ، Url ، Timestame en / decode online tools - Develop Tools', 
+    'site_description' => 'Dev-Tools ، وهي مجموعة أدوات عبر الإنترنت تقوم تلقائيًا بفك تشفير en /: محلل json ، و url en / decode ، وتحويل الطابع الزمني ...', 
+    'language' => 'لغة', 
+    'welcome' => 'مرحبًا ، يمكنك إدخال سلسلة من الأنواع مثل <kbd> json </kbd> <kbd> الطابع الزمني </kbd> ، <kbd> url en / decode </kbd> ، ستكتشفها تلقائيًا وتفك تشفيرها.', 
+    'more_function' => 'المزيد من الوظائف هي البناء.', 
+    'current_ts' => 'حالة الزمن حاليا', 
+    'current_dt' => 'التاريخ والوقت الحالي', 
+    'input_hint' => 'أدخل Json ، Timestamp ، Url هنا ...', 
+    'result' => 'نتيجة', 
+    'several_format_outputs' => 'عدة مخرجات تنسيق:', 
+    'Format' => 'شكل', 
+    'Value' => 'قيمة', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'DateTime المحلي', 
+    'GMT_DateTime' => 'توقيت غرينتش DateTime', 
+    'Copy' => 'ينسخ', 
+    'Collapse' => 'انهيار', 
+    'Collapse_Dropdown' => 'تصغير القائمة المنسدلة', 
+    'Collapse_2' => 'انهيار 2', 
+    'Collapse_3' => 'انهيار 3', 
+    'Expand' => 'وسعت', 
+
+];

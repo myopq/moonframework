@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame i narzędzia online do dekodowania - Narzędzia programistyczne', 
+    'site_description' => 'Dev-Tools, kolekcja narzędzi online do automatycznego en/dekodowania: parser json, url en/decode, konwersja znaczników czasu...', 
+    'language' => 'Język', 
+    'welcome' => 'cześć, możesz wpisać kilka znaków typu: <kbd>json</kbd> <kbd>znacznik czasu</kbd>, <kbd>url en/decode</kbd>, automatycznie go wykryje i pl/dekoduje.', 
+    'more_function' => 'więcej funkcji buduje.', 
+    'current_ts' => 'aktualny znacznik czasu', 
+    'current_dt' => 'aktualna data i godzina', 
+    'input_hint' => 'wprowadź Json, znacznik czasu, adres URL tutaj...', 
+    'result' => 'Wynik', 
+    'several_format_outputs' => 'Kilka formatów wyjściowych:', 
+    'Format' => 'Format', 
+    'Value' => 'Wartość', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Lokalna data i godzina', 
+    'GMT_DateTime' => 'GMT Data Godzina', 
+    'Copy' => 'Kopiuj', 
+    'Collapse' => 'Upadek', 
+    'Collapse_Dropdown' => 'Zwiń menu rozwijane', 
+    'Collapse_2' => 'Zwiń 2', 
+    'Collapse_3' => 'Zwiń 3', 
+    'Expand' => 'Zwiększać', 
+
+];

@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decode alat online - Alat Kembangkan', 
+    'site_description' => 'Dev-Tools, kumpulan alat online yang otomatis en/decode: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Bahasa', 
+    'welcome' => 'halo, Anda dapat memasukkan beberapa jenis string seperti <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, akan otomatis mendeteksi dan melakukan en/decode.', 
+    'more_function' => 'lebih banyak fungsi adalah membangun.', 
+    'current_ts' => 'stempel waktu saat ini', 
+    'current_dt' => 'tanggal saat ini', 
+    'input_hint' => 'masukan Json, Timestamp, Url disini...', 
+    'result' => 'Hasil', 
+    'several_format_outputs' => 'Beberapa format output:', 
+    'Format' => 'Format', 
+    'Value' => 'Nilai', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Tanggal Waktu Lokal', 
+    'GMT_DateTime' => 'Tanggal Waktu GMT', 
+    'Copy' => 'Salinan', 
+    'Collapse' => 'Jatuh', 
+    'Collapse_Dropdown' => 'Ciutkan Dropdown', 
+    'Collapse_2' => 'Ciutkan 2', 
+    'Collapse_3' => 'Ciutkan 3', 
+    'Expand' => 'Mengembangkan', 
+
+];

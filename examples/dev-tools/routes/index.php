@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Moon\Facades\R;
 
 $router = R::instance();
-
+$router->get('/', 'App\Http\IndexController@index');
 $router->get('/en', 'App\Http\IndexController@en');
 $router->get('/fr', 'App\Http\IndexController@fr');
 $router->get('/de', 'App\Http\IndexController@de');

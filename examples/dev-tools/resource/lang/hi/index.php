@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decode online tools - Develop Tools', 
+    'site_description' => 'देव-उपकरण, एक संग्रह ऑनलाइन उपकरण जो स्वचालित रूप से एन/डीकोड करता है: जेसन पार्सर, यूआरएल एन/डीकोड, टाइमस्टैम्प कन्वर्ट ...', 
+    'language' => 'भाषा', 
+    'welcome' => 'हैलो, आप कुछ प्रकार की स्ट्रिंग इनपुट कर सकते हैं जैसे <kbd>json</kbd> <kbd>टाइमस्टैम्प</kbd>, <kbd>url en/decode</kbd>, स्वतः इसका पता लगा लेगा और en/decode कर देगा।', 
+    'more_function' => 'अधिक कार्य निर्माण कर रहा है।', 
+    'current_ts' => 'वर्तमान टाइमस्टैम्प', 
+    'current_dt' => 'वर्तमान दिनांक समय', 
+    'input_hint' => 'इनपुट जेसन, टाइमस्टैम्प, यूआरएल यहां ...', 
+    'result' => 'परिणाम', 
+    'several_format_outputs' => 'कई प्रारूप आउटपुट:', 
+    'Format' => 'प्रारूप', 
+    'Value' => 'मूल्य', 
+    'ISO' => 'आईएसओ', 
+    'Local_DateTime' => 'स्थानीय दिनांक समय', 
+    'GMT_DateTime' => 'जीएमटी दिनांक समय', 
+    'Copy' => 'प्रतिलिपि', 
+    'Collapse' => 'गिर जाना', 
+    'Collapse_Dropdown' => 'ड्रॉपडाउन संक्षिप्त करें', 
+    'Collapse_2' => 'संक्षिप्त करें 2', 
+    'Collapse_3' => 'संक्षिप्त करें 3', 
+    'Expand' => 'बढ़ाना', 
+
+];

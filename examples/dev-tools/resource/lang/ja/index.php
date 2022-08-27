@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => '自動 Json、URL、タイムスタンプ エンコード/デコード オンライン ツール - 開発ツール', 
+    'site_description' => 'Dev-Tools は、自動エンコード/デコードを行うオンライン ツールのコレクションです: json パーサー、url エンコード/デコード、タイムスタンプ変換...', 
+    'language' => '言語', 
+    'welcome' => 'こんにちは、<kbd>json</kbd> <kbd>timestamp</kbd>、<kbd>url en/decode</kbd> などのいくつかのタイプの文字列を入力すると、それが自動検出されて en/decode されます。', 
+    'more_function' => 'より多くの機能が構築されています。', 
+    'current_ts' => '現在のタイムスタンプ', 
+    'current_dt' => '現在の日時', 
+    'input_hint' => 'Json、タイムスタンプ、URL をここに入力...', 
+    'result' => '結果', 
+    'several_format_outputs' => 'いくつかの形式の出力:', 
+    'Format' => 'フォーマット', 
+    'Value' => '価値', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'ローカル日時', 
+    'GMT_DateTime' => 'GMT 日時', 
+    'Copy' => 'コピー', 
+    'Collapse' => '崩壊', 
+    'Collapse_Dropdown' => 'ドロップダウンを折りたたむ', 
+    'Collapse_2' => '折りたたむ 2', 
+    'Collapse_3' => '折りたたむ 3', 
+    'Expand' => '拡大', 
+
+];

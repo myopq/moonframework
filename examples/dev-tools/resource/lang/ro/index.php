@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decode online tools - Develop Tools', 
+    'site_description' => 'Dev-Tools, o colecție de instrumente online care automat en/decode: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Limba', 
+    'welcome' => 'Bună ziua, puteți introduce câteva șiruri de caractere, cum ar fi <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, îl va detecta automat și va/decoda.', 
+    'more_function' => 'se construiește mai multă funcție.', 
+    'current_ts' => 'marca temporală curentă', 
+    'current_dt' => 'data ora curenta', 
+    'input_hint' => 'introduceți aici Json, timestamp, URL...', 
+    'result' => 'Rezultat', 
+    'several_format_outputs' => 'Mai multe ieșiri în format:', 
+    'Format' => 'Format', 
+    'Value' => 'Valoare', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Local DateTime', 
+    'GMT_DateTime' => 'GMT DateTime', 
+    'Copy' => 'Copie', 
+    'Collapse' => 'Colaps', 
+    'Collapse_Dropdown' => 'Restrângeți meniul derulant', 
+    'Collapse_2' => 'Colaps 2', 
+    'Collapse_3' => 'Colaps 3', 
+    'Expand' => 'Extinde', 
+
+];

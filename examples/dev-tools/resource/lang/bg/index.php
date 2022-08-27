@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decode онлайн инструменти – Инструменти за разработка', 
+    'site_description' => 'Dev-Tools, колекция от онлайн инструменти, които автоматично en/decode: json parser, url en/decode, timestamp convert...', 
+    'language' => 'език', 
+    'welcome' => 'здравей, можеш да въведеш низ от няколко типа, като <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, автоматично ще го открие и en/decode.', 
+    'more_function' => 'повече функция се изгражда.', 
+    'current_ts' => 'текущо времево клеймо', 
+    'current_dt' => 'текуща дата и час', 
+    'input_hint' => 'въведете Json, Timestamp, Url тук...', 
+    'result' => 'Резултат', 
+    'several_format_outputs' => 'Няколко изходни формати:', 
+    'Format' => 'формат', 
+    'Value' => 'Стойност', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Местна дата и час', 
+    'GMT_DateTime' => 'Дата и час по Гринуич', 
+    'Copy' => 'копие', 
+    'Collapse' => 'Свиване', 
+    'Collapse_Dropdown' => 'Свиване на падащото меню', 
+    'Collapse_2' => 'Свиване 2', 
+    'Collapse_3' => 'Свиване 3', 
+    'Expand' => 'Разширяване', 
+
+];

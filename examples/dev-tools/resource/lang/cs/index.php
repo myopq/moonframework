@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decode online nástroje - Develop Tools', 
+    'site_description' => 'Dev-Tools, sbírka online nástrojů, které automaticky en/dekódují: json parser, url en/decode, převod časových razítek...', 
+    'language' => 'Jazyk', 
+    'welcome' => 'ahoj, můžete zadat několik typů řetězců, které jako <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd> automaticky detekují a en/dekódují.', 
+    'more_function' => 'další funkce je budování.', 
+    'current_ts' => 'aktuální časové razítko', 
+    'current_dt' => 'aktuální datum a čas', 
+    'input_hint' => 'zde zadejte Json, časové razítko, URL...', 
+    'result' => 'Výsledek', 
+    'several_format_outputs' => 'Několik formátových výstupů:', 
+    'Format' => 'Formát', 
+    'Value' => 'Hodnota', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Místní datum a čas', 
+    'GMT_DateTime' => 'GMT DateTime', 
+    'Copy' => 'kopírovat', 
+    'Collapse' => 'Kolaps', 
+    'Collapse_Dropdown' => 'Sbalit rozbalovací nabídku', 
+    'Collapse_2' => 'Sbalit 2', 
+    'Collapse_3' => 'Sbalit 3', 
+    'Expand' => 'Rozšířit', 
+
+];

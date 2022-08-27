@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestam en/פענוח כלים מקוונים - פיתוח כלים', 
+    'site_description' => 'Dev-Tools, אוסף כלים מקוונים שמפענחים/פענוח אוטומטיים: json parser, url en/decode, המרת חותמת זמן...', 
+    'language' => 'שפה', 
+    'welcome' => 'שלום, אתה יכול להזין כמה סוגים של מחרוזת שכמו <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, תזהה אותו אוטומטית ו-en/decode.', 
+    'more_function' => 'יותר פונקציה בונה.', 
+    'current_ts' => 'חותמת זמן נוכחית', 
+    'current_dt' => 'התאריך הנוכחי', 
+    'input_hint' => 'הזן כאן Json, חותמת זמן, כתובת אתר...', 
+    'result' => 'תוֹצָאָה', 
+    'several_format_outputs' => 'מספר פלטי פורמט:', 
+    'Format' => 'פוּרמָט', 
+    'Value' => 'ערך', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'תאריך שעון מקומי', 
+    'GMT_DateTime' => 'GMT DateTime', 
+    'Copy' => 'עותק', 
+    'Collapse' => 'הִתמוֹטְטוּת', 
+    'Collapse_Dropdown' => 'כווץ את התפריט הנפתח', 
+    'Collapse_2' => 'כיווץ 2', 
+    'Collapse_3' => 'התמוטטות 3', 
+    'Expand' => 'לְהַרְחִיב', 
+
+];

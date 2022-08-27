@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame en/decode online-työkalut – Kehitä työkaluja', 
+    'site_description' => 'Dev-Tools, online-työkalujen kokoelma, joka purkaa automaattisesti: json-parser, url-en/decode, aikaleimamuunnos...', 
+    'language' => 'Kieli', 
+    'welcome' => 'hei, voit syöttää muutaman tyyppisen merkkijonon, joka kuten <kbd>json</kbd> <kbd>aikaleima</kbd>, <kbd>url en/decode</kbd> tunnistaa sen ja purkaa sen automaattisesti.', 
+    'more_function' => 'lisää toimintoja rakentuu.', 
+    'current_ts' => 'nykyinen aikaleima', 
+    'current_dt' => 'nykyinen päivämäärä ja kellonaika', 
+    'input_hint' => 'syötä Json, aikaleima, URL tähän...', 
+    'result' => 'Tulos', 
+    'several_format_outputs' => 'Useita formaatteja:', 
+    'Format' => 'Muoto', 
+    'Value' => 'Arvo', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Paikallinen DateTime', 
+    'GMT_DateTime' => 'GMT DateTime', 
+    'Copy' => 'Kopio', 
+    'Collapse' => 'Romahdus', 
+    'Collapse_Dropdown' => 'Kutista pudotusvalikko', 
+    'Collapse_2' => 'Kutista 2', 
+    'Collapse_3' => 'Kutista 3', 
+    'Expand' => 'Laajentaa', 
+
+];

@@ -1,0 +1,25 @@
+<?php
+return[
+    'site_title' => 'Auto Json, Url, Timestame sv/avkoda onlineverktyg - Utveckla verktyg', 
+    'site_description' => 'Dev-Tools, en samling onlineverktyg som automatiskt en/avkodar: json parser, url en/decode, timestamp convert...', 
+    'language' => 'Språk', 
+    'welcome' => 'hej, du kan mata in några typsträngar som som <kbd>json</kbd> <kbd>tidsstämpel</kbd>, <kbd>url en/decode</kbd>, kommer att automatiskt upptäcka den och en/dekoda.', 
+    'more_function' => 'mer funktion bygger.', 
+    'current_ts' => 'aktuell tidsstämpel', 
+    'current_dt' => 'aktuell datumtid', 
+    'input_hint' => 'skriv in Json, Timestamp, URL här...', 
+    'result' => 'Resultat', 
+    'several_format_outputs' => 'Flera formatutgångar:', 
+    'Format' => 'Formatera', 
+    'Value' => 'Värde', 
+    'ISO' => 'ISO', 
+    'Local_DateTime' => 'Lokal DatumTid', 
+    'GMT_DateTime' => 'GMT DateTime', 
+    'Copy' => 'Kopiera', 
+    'Collapse' => 'Kollaps', 
+    'Collapse_Dropdown' => 'Komprimera rullgardinsmenyn', 
+    'Collapse_2' => 'Kollaps 2', 
+    'Collapse_3' => 'Kollaps 3', 
+    'Expand' => 'Bygga ut', 
+
+];
