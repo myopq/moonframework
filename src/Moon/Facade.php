@@ -420,6 +420,9 @@ class R extends Facade {
 /**
  * Core
  * @method static void runHttp()
+ * @method static void setLocale($lang)
+ * @method static void getLocale()
+ * @method static bool isLocale($lang)
  */
 class APP extends Facade {
     private static $app;

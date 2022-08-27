@@ -17,6 +17,7 @@ class Application {
 
     public function init(): Application {
         $this->initConfig();
+        $this->initLang();
 
         return $this;
     }
@@ -32,12 +33,33 @@ class Application {
         define('DEBUG_MODE', APP_ENV == 'develop');
     }
 
+    private function initLang(): void {
+        $langs = parseLangs();
+        $lang = C::get("default_lang");
+        if (!empty($langs) && is_dir(resource_path('langs/' . array_shift($langs)))) {
+            $lang = $langs[0];
+        }
+        $this->setlocale($lang);
+    }
+
     private function initRoute(): Router {
         $routeFile = APP_PATH . '/routes/index.php';
         if (is_file($routeFile)) {
             require $routeFile;
         }
         return R::instance();
+    }
+
+    public function setLocale($lang): void {
+        C::set('lang', $lang);
+    }
+
+    public function getLocale(): string {
+        return C::get('lang');
+    }
+
+    public function isLocal($lang): bool {
+        return $lang === C::get('lang');
     }
 
     public function runHttp() {

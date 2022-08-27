@@ -9,12 +9,8 @@ use Moon\Facades\C;
 
 class ViewTemplate {
 	private $subtemplates = array();
-	private $cssModules = '';
-	private $jsModules = '';
 	private $replacecode = array('search' => array(), 'replace' => array());
 	private $blocks = array();
-	private $language = array();
-	private $file = '';
 
     private $themes = "default";
     private $cacheDir = "";
@@ -60,7 +56,7 @@ class ViewTemplate {
 
 		$template = preg_replace("/([\n\r]+)\t+/s", "\\1", $template);
 		$template = preg_replace("/\<\!\-\-\{(.+?)\}\-\-\>/s", "{\\1}", $template);
-		$template = preg_replace_callback("/\{lang\s+(.+?)\}/is", function($mts) {
+		$template = preg_replace_callback("/\{lang\s+(.+?)}/is", function($mts) {
 			return $this->languagevar($mts[1]);
 		}, $template);
 		// $template = preg_replace("/[\n\r\t]*\{block\/(\d+?)\}[\n\r\t]*/ie", "\$this->blocktags('\\1')", $template);
@@ -188,16 +184,7 @@ class ViewTemplate {
 	}
 
 	function languagevar($var) {
-		$vars = explode(':', $var);
-
-        !isset($this->language['inner']) && $this->language['inner'] = array();
-        $langvar = &$this->language['inner'];
-		
-		if(isset($langvar[$var])) {
-			return $langvar[$var];
-		} else {
-			return '!'.$var.'!';
-		}
+		return lang($var, []);
 	}
 
 	function blocktags($parameter) {

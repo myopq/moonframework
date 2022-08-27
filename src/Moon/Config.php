@@ -46,7 +46,7 @@ class Config {
             $configNew[$key] = $configNew;
         }
 
-        $this->config = array_merge_recursive($this->config, $configNew);
+        $this->config = array_replace_recursive($this->config, $configNew);
     }
 
     private function parseKey(string $key): array

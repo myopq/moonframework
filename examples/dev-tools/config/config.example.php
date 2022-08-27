@@ -19,5 +19,8 @@ return [
     'view' => [
         'themes' => 'default',
         'vars' => []
-    ]
+    ],
+
+    'default_lang' => 'en',
+    'default_timezone' => 'Etc/GMT+0',
 ];

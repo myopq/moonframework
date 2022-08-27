@@ -4,7 +4,6 @@
 <script async="async" src="{assets static/js/bignumber.min.js}"></script>
 <script async="async" src="{assets static/js/clipboard.min.js}"></script>
 <script src="{assets static/js/EndecodeParser.js}"></script>
-<!-- <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 <link rel="stylesheet" type="text/css" href="{assets static/css/font-awesome.min.css}" />
 <style>
     form {
@@ -24,21 +23,20 @@
     .txtDateTime { width: 300px; }
 
 </style>
-
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <p>hello, you can input a few type string that like <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, will auto detect it and en/decode.</p>
-            <p>more function is building.</p>
+            <p>{lang index.welcome}</p>
+            <p>{lang index.more_function}</p>
             <br />
             <p>
-                current timestamp: <input type="text" class="clickSel txtResult" id="txtCurTimestamp" style="width: 124px;" />
-                current datetime: <input type="text" class="clickSel txtResult" id="txtCurDateTime" style="width: 300px;" />
+                {lang index.current_ts}: <input type="text" class="clickSel txtResult" id="txtCurTimestamp" style="width: 124px;" />
+                {lang index.current_dt}: <input type="text" class="clickSel txtResult" id="txtCurDateTime" style="width: 300px;" />
             </p>
         </div>
         <div class="panel-body" style="background-color: #fafafa;">
             <form>
-                <textarea id="content" class="clickSel" placeholder="please input Json, Timestamp here..."></textarea>
+                <textarea id="content" class="clickSel" placeholder="{lang index.input_hint}"></textarea>
             </form>
         </div>
         <div class="panel-body hide" id="parser-menu">
@@ -46,11 +44,9 @@
         </div>
         <div class="panel-footer" id="resultTitle">
             <div class="row">
-                <div class="col-md-1" style="line-height: 40px;">Result</div>
+                <div class="col-md-1" style="line-height: 40px;">{lang index.result}</div>
                 <div class="col-md-11"><div class="sharethis-inline-share-buttons"></div></div>
             </div>
-            
-            
         </div>
         
         <div class="panel-body" id="result" style="background-color: #fafafa;">
@@ -63,8 +59,6 @@
             </div>
         </div>
       </div>
-
-      {template index/sections/timestamp}
 </div>
 <script>
     var timerCurrent = null;

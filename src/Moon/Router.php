@@ -34,6 +34,21 @@ class Router {
         return $this;
     }
 
+    public function post(string $uri, string $action): Router {
+        $path = $this->getPath($uri);
+        $this->routes[self::POST][$path] = $action;
+
+        return $this;
+    }
+
+    public function any(string $uri, string $action): Router {
+        $path = $this->getPath($uri);
+        $this->routes[self::GET][$path] = $action;
+        $this->routes[self::POST][$path] = $action;
+
+        return $this;
+    }
+
     public function group(array $attrs, callable $callback): Router
     {
         array_push($this->routeGroups, $attrs);
