@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode online-työkalut – Kehitä työkaluja', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode online-työkalut – Kehitä työkaluja', 
     'site_description' => 'Dev-Tools, online-työkalujen kokoelma, joka purkaa automaattisesti: json-parser, url-en/decode, aikaleimamuunnos...', 
     'language' => 'Kieli', 
     'welcome' => 'hei, voit syöttää muutaman tyyppisen merkkijonon, joka kuten <kbd>json</kbd> <kbd>aikaleima</kbd>, <kbd>url en/decode</kbd> tunnistaa sen ja purkaa sen automaattisesti.', 

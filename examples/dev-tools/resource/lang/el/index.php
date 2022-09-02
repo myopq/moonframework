@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Online εργαλεία Auto Json, Url, Timestame en/decode - Develop Tools', 
+    'site_title' => 'Online εργαλεία Auto Json, Url, Timestamp en/decode - Develop Tools', 
     'site_description' => 'Dev-Tools, μια συλλογή διαδικτυακών εργαλείων που αυτόματα en/αποκωδικοποιούν: json parser, url en/decode, timestamp convert...', 
     'language' => 'Γλώσσα', 
     'welcome' => 'Γεια σας, μπορείτε να εισαγάγετε μια συμβολοσειρά τύπων που όπως <kbd>json</kbd> <kbd>χρονοσήμανση</kbd>, <kbd>url en/decode</kbd>, θα την ανιχνεύει αυτόματα και θα την αποκωδικοποιεί.', 

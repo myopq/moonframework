@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json ، Url ، Timestame en / decode online tools - Develop Tools', 
+    'site_title' => 'Auto Json ، Url ، Timestamp en / decode online tools - Develop Tools', 
     'site_description' => 'Dev-Tools ، وهي مجموعة أدوات عبر الإنترنت تقوم تلقائيًا بفك تشفير en /: محلل json ، و url en / decode ، وتحويل الطابع الزمني ...', 
     'language' => 'لغة', 
     'welcome' => 'مرحبًا ، يمكنك إدخال سلسلة من الأنواع مثل <kbd> json </kbd> <kbd> الطابع الزمني </kbd> ، <kbd> url en / decode </kbd> ، ستكتشفها تلقائيًا وتفك تشفيرها.', 

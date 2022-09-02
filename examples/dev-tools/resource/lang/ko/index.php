@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode 온라인 도구 - 개발 도구', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode 온라인 도구 - 개발 도구', 
     'site_description' => 'Dev-Tools, 자동으로 en/decode하는 컬렉션 온라인 도구: json 파서, url en/decode, 타임스탬프 변환...', 
     'language' => '언어', 
     'welcome' => '안녕하세요, <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>와 같은 몇 가지 유형의 문자열을 입력하면 자동으로 감지하고 en/decode합니다.', 

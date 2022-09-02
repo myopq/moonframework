@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Онлайн-инструменты Auto Json, Url, Timestame en/decode - Develop Tools', 
+    'site_title' => 'Онлайн-инструменты Auto Json, Url, Timestamp en/decode - Develop Tools', 
     'site_description' => 'Dev-Tools, коллекция онлайн-инструментов, которые автоматически кодируют/декодируют: синтаксический анализатор json, кодирование/декодирование URL-адресов, преобразование временных меток...', 
     'language' => 'Язык', 
     'welcome' => 'привет, вы можете ввести строку нескольких типов, например <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, автоматически обнаружит ее и закодирует/декодирует.', 

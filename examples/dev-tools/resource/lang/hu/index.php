@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, URL, Timestame en/dekódoló online eszközök – Eszközök fejlesztése', 
+    'site_title' => 'Auto Json, URL, Timestamp en/dekódoló online eszközök – Eszközök fejlesztése', 
     'site_description' => 'Dev-Tools, online eszközök gyűjteménye, amelyek automatikusan kódolnak/dekódolnak: json parser, url en/decode, timestamp convert...', 
     'language' => 'Nyelv', 
     'welcome' => 'hello, megadhat néhány típusú karakterláncot, amely például a <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd> automatikusan felismeri és dekódolja.', 

@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame tr/çevrimiçi araçların kodunu çöz - Araç Geliştirme', 
+    'site_title' => 'Auto Json, Url, Timestamp tr/çevrimiçi araçların kodunu çöz - Araç Geliştirme', 
     'site_description' => 'Dev-Tools, otomatik olarak kodlayan/çözen çevrimiçi araçlar koleksiyonu: json ayrıştırıcı, url en/kod çözme, zaman damgası dönüştürme...', 
     'language' => 'Dil', 
     'welcome' => 'merhaba, <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd> gibi, otomatik olarak algılayacak ve kodunu çözecek birkaç tür dize girebilirsiniz.', 

@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame sv/avkoda onlineverktyg - Utveckla verktyg', 
+    'site_title' => 'Auto Json, Url, Timestamp sv/avkoda onlineverktyg - Utveckla verktyg', 
     'site_description' => 'Dev-Tools, en samling onlineverktyg som automatiskt en/avkodar: json parser, url en/decode, timestamp convert...', 
     'language' => 'Språk', 
     'welcome' => 'hej, du kan mata in några typsträngar som som <kbd>json</kbd> <kbd>tidsstämpel</kbd>, <kbd>url en/decode</kbd>, kommer att automatiskt upptäcka den och en/dekoda.', 

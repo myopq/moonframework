@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode онлайн инструменти – Инструменти за разработка', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode онлайн инструменти – Инструменти за разработка', 
     'site_description' => 'Dev-Tools, колекция от онлайн инструменти, които автоматично en/decode: json parser, url en/decode, timestamp convert...', 
     'language' => 'език', 
     'welcome' => 'здравей, можеш да въведеш низ от няколко типа, като <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, автоматично ще го открие и en/decode.', 

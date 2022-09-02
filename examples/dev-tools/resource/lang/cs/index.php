@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode online nástroje - Develop Tools', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode online nástroje - Develop Tools', 
     'site_description' => 'Dev-Tools, sbírka online nástrojů, které automaticky en/dekódují: json parser, url en/decode, převod časových razítek...', 
     'language' => 'Jazyk', 
     'welcome' => 'ahoj, můžete zadat několik typů řetězců, které jako <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd> automaticky detekují a en/dekódují.', 

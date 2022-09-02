@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode เครื่องมือออนไลน์ - Develop Tools', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode เครื่องมือออนไลน์ - Develop Tools', 
     'site_description' => 'Dev-Tools ชุดเครื่องมือออนไลน์ที่เข้ารหัส/ถอดรหัสอัตโนมัติ: json parser, url en/decode, timestamp convert...', 
     'language' => 'ภาษา', 
     'welcome' => 'สวัสดี คุณสามารถป้อนสตริงบางประเภทเช่น <kbd>json</kbd> <kbd>ประทับเวลา</kbd>, <kbd>url en/decode</kbd> จะตรวจจับและเข้ารหัสโดยอัตโนมัติ', 

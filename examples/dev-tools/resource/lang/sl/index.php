@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Spletna orodja Auto Json, Url, Timestame en/decode – orodja za razvoj', 
+    'site_title' => 'Spletna orodja Auto Json, Url, Timestamp en/decode – orodja za razvoj', 
     'site_description' => 'Dev-Tools, zbirka spletnih orodij, ki samodejno en/dekodirajo: razčlenjevalnik json, url en/decode, pretvorbo časovnega žiga ...', 
     'language' => 'Jezik', 
     'welcome' => 'pozdravljeni, vnesete lahko nekaj nizov, ki bodo, kot je <kbd>json</kbd> <kbd>časovni žig</kbd>, <kbd>url en/decode</kbd>, samodejno zaznali in en/decode.', 

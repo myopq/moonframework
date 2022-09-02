@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame i narzędzia online do dekodowania - Narzędzia programistyczne', 
+    'site_title' => 'Auto Json, Url, Timestamp i narzędzia online do dekodowania - Narzędzia programistyczne', 
     'site_description' => 'Dev-Tools, kolekcja narzędzi online do automatycznego en/dekodowania: parser json, url en/decode, konwersja znaczników czasu...', 
     'language' => 'Język', 
     'welcome' => 'cześć, możesz wpisać kilka znaków typu: <kbd>json</kbd> <kbd>znacznik czasu</kbd>, <kbd>url en/decode</kbd>, automatycznie go wykryje i pl/dekoduje.', 

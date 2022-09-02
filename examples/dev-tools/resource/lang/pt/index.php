@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decodificar ferramentas online - Ferramentas de desenvolvimento', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decodificar ferramentas online - Ferramentas de desenvolvimento', 
     'site_description' => 'Dev-Tools, uma coleção de ferramentas online que codificam/decodificam automaticamente: json parser, url en/decode, timestamp convert...', 
     'language' => 'Linguagem', 
     'welcome' => 'Olá, você pode inserir algumas strings de tipo como <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, irá detectá-lo automaticamente e en/decodificar.', 

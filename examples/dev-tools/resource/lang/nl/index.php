@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decodeer online tools - Ontwikkeltools', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decodeer online tools - Ontwikkeltools', 
     'site_description' => 'Dev-Tools, een verzameling online tools die automatisch en/decoderen: json parser, url en/decode, timestamp convert...', 
     'language' => 'Taal', 
     'welcome' => 'hallo, je kunt een paar tekenreeksen invoeren die, zoals <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, deze automatisch detecteren en en/decoderen.', 

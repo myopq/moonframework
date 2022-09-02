@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode online tools - Develop Tools', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode online tools - Develop Tools', 
     'site_description' => 'देव-उपकरण, एक संग्रह ऑनलाइन उपकरण जो स्वचालित रूप से एन/डीकोड करता है: जेसन पार्सर, यूआरएल एन/डीकोड, टाइमस्टैम्प कन्वर्ट ...', 
     'language' => 'भाषा', 
     'welcome' => 'हैलो, आप कुछ प्रकार की स्ट्रिंग इनपुट कर सकते हैं जैसे <kbd>json</kbd> <kbd>टाइमस्टैम्प</kbd>, <kbd>url en/decode</kbd>, स्वतः इसका पता लगा लेगा और en/decode कर देगा।', 

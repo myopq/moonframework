@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode অনলাইন টুলস - ডেভেলপ টুলস', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode অনলাইন টুলস - ডেভেলপ টুলস', 
     'site_description' => 'Dev-Tools, একটি সংগ্রহ অনলাইন টুল যা স্বয়ংক্রিয়ভাবে en/decode: json parser, url en/decode, টাইমস্ট্যাম্প রূপান্তর...', 
     'language' => 'ভাষা', 
     'welcome' => 'হ্যালো, আপনি কিছু টাইপ স্ট্রিং ইনপুট করতে পারেন যেমন <kbd>json</kbd> <kbd>টাইমস্ট্যাম্প</kbd>, <kbd>url en/decode</kbd>, এটি স্বয়ংক্রিয়ভাবে সনাক্ত করবে এবং en/decode করবে।', 

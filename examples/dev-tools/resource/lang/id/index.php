@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode alat online - Alat Kembangkan', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode alat online - Alat Kembangkan', 
     'site_description' => 'Dev-Tools, kumpulan alat online yang otomatis en/decode: json parser, url en/decode, timestamp convert...', 
     'language' => 'Bahasa', 
     'welcome' => 'halo, Anda dapat memasukkan beberapa jenis string seperti <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, akan otomatis mendeteksi dan melakukan en/decode.', 

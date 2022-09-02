@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Online nástroje Auto Json, Url, Timestame en/decode - Develop Tools', 
+    'site_title' => 'Online nástroje Auto Json, Url, Timestamp en/decode - Develop Tools', 
     'site_description' => 'Dev-Tools, zbierka online nástrojov, ktoré automaticky zakódujú/dekódujú: json parser, url en/decode, prevod časových pečiatok...', 
     'language' => 'Jazyk', 
     'welcome' => 'ahoj, môžete zadať niekoľko reťazcov typu <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, automaticky to zistí a en/decode.', 

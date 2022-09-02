@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en/decode online tools - Develop Tools', 
+    'site_title' => 'Auto Json, Url, Timestamp en/decode online tools - Develop Tools', 
     'site_description' => 'Dev-Tools, o colecție de instrumente online care automat en/decode: json parser, url en/decode, timestamp convert...', 
     'language' => 'Limba', 
     'welcome' => 'Bună ziua, puteți introduce câteva șiruri de caractere, cum ar fi <kbd>json</kbd> <kbd>timestamp</kbd>, <kbd>url en/decode</kbd>, îl va detecta automat și va/decoda.', 

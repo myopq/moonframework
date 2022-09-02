@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'site_title' => '一个自动编解码:Json, Url, Base64, 时间戳(TimeStame)的开发者在线工具 - Develop Tools',
+    'site_title' => '一个自动编解码:Json, Url, Base64, 时间戳(Timestamp)的开发者在线工具 - Develop Tools',
     'site_description' => '工具会自动识别输入的内容，并进行编码或解码，目前支持: JSON、URL编码解码、时间戳解码、Base64解码，更多功能正在开发中，欢迎贡献代码。',
     'language' => '选择语言',
     'welcome' => '欢迎使用自动编/解码工具<br />

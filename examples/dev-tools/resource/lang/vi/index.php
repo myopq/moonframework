@@ -1,6 +1,6 @@
 <?php
 return[
-    'site_title' => 'Auto Json, Url, Timestame en / decode các công cụ trực tuyến - Công cụ phát triển', 
+    'site_title' => 'Auto Json, Url, Timestamp en / decode các công cụ trực tuyến - Công cụ phát triển', 
     'site_description' => 'Dev-Tools, một bộ sưu tập các công cụ trực tuyến tự động en / decode: json parser, url en / decode, timestamp convert ...', 
     'language' => 'Ngôn ngữ', 
     'welcome' => 'xin chào, bạn có thể nhập một vài chuỗi kiểu như <kbd> json </kbd> <kbd> timestamp </kbd>, <kbd> url en / decode </kbd>, sẽ tự động phát hiện và en / decode.', 
