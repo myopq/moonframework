@@ -1,16 +1,24 @@
-<div class="panel panel-default">
-    <div class="panel-heading">Get current timestamp in some programes</div>
+<div class="panel">
+    <div class="panel-heading">
+        <h2>{lang index.tsp_head}</h2>
+    </div>
     <div class="panel-body">
-<p>Get timestamp in swift</p>
+        
+<p>
+{lang index.tsp_desc}
+</p>
+<p>{lang index.tsp_get_in_prog}</p>
+
+<p>{lang index.tsp_in_swift}</p>
 <pre>NSDate().timeIntervalSince1970</pre>
 
-<p>Get timestamp in Go lang</p>
+<p>{lang index.tsp_in_golang}</p>
 <pre>
 import ( "time")
 int32(time.Now().Unix())
 </pre>
 
-<p>Get timestamp in Java</p>
+<p>{lang index.tsp_in_java}</p>
 <pre>
 // in pure java
 (int) (System.currentTimeMillis() / 1000)
@@ -19,32 +27,32 @@ int32(time.Now().Unix())
 (int) (DateTime.now().getMillis() / 1000)
 </pre>
 
-<p>Get timestamp in JavaScript</p>
+<p>{lang index.tsp_in_javascript}</p>
 <pre>	
 Math.round(new Date() / 1000)
 </pre>
 
-<p>Get timestamp in Objective-C</p>
+<p>{lang index.tsp_in_oc}</p>
 <pre>
 [[NSDate date] timeIntervalSince1970]
 </pre>
 
-<p>Get timestamp in MySQL</p>
+<p>{lang index.tsp_in_mysql}</p>
 <pre>
-SELECT unix_timestamp(now())
+    SELECT unix_timestamp(now())
 </pre>
 
-<p>Get timestamp in SQLite</p>
+<p>{lang index.tsp_in_sqllite}</p>
 <pre>
 SELECT strftime('%s', 'now')
 </pre>
 
-<p>Get timestamp in Erlang</p>
+<p>{lang index.tsp_in_erlang}</p>
 <pre>
 calendar:datetime_to_gregorian_seconds(calendar:universal_time())-719528*24*3600.
 </pre>
 
-<p>Get timestamp in PHP</p>
+<p>{lang index.tsp_in_php}</p>
 <pre>
 // pure php
 time()
@@ -53,33 +61,33 @@ time()
 Carbon::now()->timestamp
 </pre>
 
-<p>Get timestamp in Python</p>
+<p>{lang index.tsp_in_py}</p>
 <pre>
 import time
 time.time()
 </pre>
 
-<p>Get timestamp in Ruby</p>
+<p>{lang index.tsp_in_puby}</p>
 <pre>
 Time.now.to_i
 </pre>
 
-<p>Get timestamp in Shell</p>
+<p>{lang index.tsp_in_shell}</p>
 <pre>
 date +%s
 </pre>
 
-<p>Get timestamp in Groovy</p>
+<p>{lang index.tsp_in_groovy}</p>
 <pre>
 (new Date().time / 1000).intValue()
 </pre>
 
-<p>Get timestamp in Lua</p>
+<p>{lang index.tsp_in_lua}</p>
 <pre>
 os.time()
 </pre>
 
-<p>Get timestamp in .NET/C#</p>
+<p>{lang index.tsp_in_csharp}</p>
 <pre>
 (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000
 </pre>

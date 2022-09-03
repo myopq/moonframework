@@ -21,6 +21,7 @@
     .fa { margin-left: 5px; margin-right: 2px;}
     .txtResult { outline: none; border: 0px; padding: 3px 10px;}
     .txtDateTime { width: 300px; }
+    p { margin-bottom: 20px;}
 
 </style>
 <div class="container">
@@ -58,7 +59,27 @@
 
             </div>
         </div>
-      </div>
+    </div>
+
+    <div class="panel">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#pl_json" aria-controls="pl_json" role="tab" data-toggle="tab">Json</a></li>
+            <li role="presentation"><a href="#pl_url" aria-controls="pl_url" role="tab" data-toggle="tab">URL</a></li>
+            <li role="presentation"><a href="#pl_timestamp" aria-controls="pl_timestamp" role="tab" data-toggle="tab">TimeStamp</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="pl_json">
+                {template index/sections/json}
+            </div>
+            <div role="tabpanel" class="tab-pane" id="pl_url">
+                {template index/sections/url}
+            </div>
+            <div role="tabpanel" class="tab-pane" id="pl_timestamp">
+                {template index/sections/timestamp}
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     var timerCurrent = null;

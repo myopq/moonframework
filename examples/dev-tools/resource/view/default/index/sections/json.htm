@@ -1,0 +1,130 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h2>{lang index.json_head}</h2>
+    </div>
+    <div class="panel-body">
+        <p>{lang index.json_desc1}</p>
+        
+        <p>{lang index.json_desc2}</p>
+
+<p>
+<b>{lang index.json_in_js}</b><br />
+<pre>
+var students = '{"id": 1, "name": "dan", "age": 20, "grade": {"gradeId": 1, "gradeName": "abc"}}';
+console.log(typeof students);
+
+var model = JSON.parse(students);
+console.log(typeof model);
+console.log(model);
+</pre>
+</p>
+
+<p>
+<b>{lang index.json_in_py_dump}</b><br />
+<pre>
+>>> import json
+>>> json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+'["foo", {"bar": ["baz", null, 1.0, 2]}]'
+>>> print(json.dumps("\"foo\bar"))
+"\"foo\bar"
+>>> print(json.dumps('\u1234'))
+"\u1234"
+>>> print(json.dumps('\\'))
+"\\"
+>>> print(json.dumps({"c": 0, "b": 0, "a": 0}, sort_keys=True))
+{"a": 0, "b": 0, "c": 0}
+
+// Pretty printing
+>>> import json
+>>> print(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4))
+{
+    "4": 5,
+    "6": 7
+}
+</pre>
+</p>
+
+<p>
+<b>{lang index.json_in_py_load}</b><br />
+<pre>
+>>> import json
+>>> json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
+['foo', {'bar': ['baz', None, 1.0, 2]}]
+</pre>
+</p>
+
+
+<p>
+<b>{lang index.json_in_py_dict2json}</b><br />
+
+<pre>
+import json
+
+# Data to be written
+dictionary ={
+    "id": "04",
+    "name": "sunil",
+    "department": "HR"
+}
+    
+# Serializing json
+json_object = json.dumps(dictionary, indent = 4)
+print(json_object)
+</pre>
+</p>
+
+<p>
+<b>{lang index.json_in_json}</b><br />
+<pre>
+import org.json.*;
+
+String jsonString = ... ; //assign your JSON String here
+JSONObject obj = new JSONObject(jsonString);
+String pageName = obj.getJSONObject("pageInfo").getString("pageName");
+
+JSONArray arr = obj.getJSONArray("posts"); // notice that `"posts": [...]`
+for (int i = 0; i < arr.length(); i++)
+{
+    String post_id = arr.getJSONObject(i).getString("post_id");
+    ......
+}
+</pre>
+</p>
+
+<p>
+<b>{lang index.json_in_php}</b><br />
+<pre>
+// php json encode
+$aryStudent = [
+    'id' => 1,
+    'name' => 'dan',
+];
+$jsonStr = json_encode($aryStudent);
+var_dump(jsonStr);
+
+// php json decode to object
+$jsonObj = json_decode($jsonStr);
+var_dump($jsonObj);
+
+// php json decode to array
+$jsonAry = json_decode($jsonStr, true);
+var_dump($jsonAry);
+</pre>
+</p>
+
+<p>
+<b>{lang index.json_in_js_obj2json}</b><br />
+<pre>
+// Stringify a JavaScript Object
+const obj = {name: "John", age: 30, city: "New York"};
+const myJSON = JSON.stringify(obj);
+console.log(myJSON);
+
+// Parsing JSON
+const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+console.log(obj);
+</pre>
+</p>
+
+    </div>
+</div>

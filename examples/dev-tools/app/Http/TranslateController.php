@@ -81,7 +81,7 @@ class TranslateController extends HttpController
         }
 
         usort($files, function($a, $b) {
-            return strcmp($a['file'], $b['file']);
+            return strcmp($a['path'], $b['path']);
         });
         return $files;
     }

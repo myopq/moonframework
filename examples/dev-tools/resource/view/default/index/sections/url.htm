@@ -1,0 +1,100 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h2>{lang index.url_head}</h2>
+    </div>
+    <div class="panel-body">
+        <p>{lang index.url_desc1}</p>
+
+        <p>{lang index.url_desc2}</p>
+
+        <p>{lang index.url_desc3}</p>
+
+        <p>{lang index.url_desc4}</p>
+<p>
+<b>{lang index.url_in_js}</b><br />
+<pre>
+// javascript url encode
+
+// encodes characters such as ?,=,/,&,:
+console.log(encodeURIComponent('htts://dev-tools.link?test=1'));
+// expected output: "htts%3A%2F%2Fdev-tools.link%3Ftest%3D1"
+
+console.log(encodeURIComponent('htts://dev-tools.link?test=шеллы'));
+// expected output: "htts%3A%2F%2Fdev-tools.link%3Ftest%3D%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+
+// javascript url decode
+const uri = 'htts://dev-tools.link/?x=шеллы';
+const encoded = encodeURI(uri);
+console.log(encoded);
+// expected output: "htts://dev-tools.link/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // expected output: "htts://dev-tools.link/?x=шеллы"
+} catch (e) { // catches a malformed URI
+  console.error(e);
+}
+</pre>
+</p>
+
+
+<p>
+<b>{lang index.url_in_php}</b><br />
+<pre>
+// php urlencode() example
+echo '&lt;a href="mycgi?foo=', urlencode($userinput), '"&gt;';
+
+// php urlencode() and htmlentities() example
+$query_string = 'foo=' . urlencode($foo) . '&bar=' . urlencode($bar);
+echo '&lt;a href="mycgi?' . htmlentities($query_string) . '"&gt;';
+</pre>
+</p>
+
+
+<p>
+<b>{lang index.url_in_py}</b><br />
+<pre>
+// python url encode python3
+>>> import urllib.parse
+>>> query = 'Hellö Wörld@Python'
+>>> urllib.parse.quote(query)
+'Hell%C3%B6%20W%C3%B6rld%40Python'
+
+// python url encode python2
+>>> import urllib
+>>> urllib.quote('Hello World@Python2')
+'Hello%20World%40Python2'
+
+// python url decode python3
+>>> import urllib.parse
+>>> encodedStr = 'Hell%C3%B6%20W%C3%B6rld%40Python'
+>>> urllib.parse.unquote(encodedStr)
+'Hellö Wörld@Python'
+
+// python url decode python2
+>>> import urllib
+>>> queryStr = 'Hello%20World%0A'
+>>> urllib.unquote(queryStr)
+'Hello World\n'
+</pre>
+</p>
+
+
+<p>
+<b>{lang index.url_in_java}</b><br />
+<pre>
+// java url encode
+private String encodeURL(String value) {
+    return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
+}
+
+// java url decode
+private String decodeURL(String value) {
+    return URLDecoder.decode(value, StandardCharsets.UTF_8.toString());
+}
+</pre>
+</p>
+
+    </div>
+</div>
