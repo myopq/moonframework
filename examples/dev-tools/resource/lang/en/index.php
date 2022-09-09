@@ -29,7 +29,7 @@ return [
 
     // section timestamp
     'tsp_head' => 'A free timestamp to date Converter tools',
-    'tsp_desc' => 'Timestamp Online is timestamp converver between unix timestamp and human readable form date. If you want to convert timestamp, it is sufficient to either enter your timestamp into input area.',
+    'tsp_desc' => 'The unix time stamp is a way to track time as a running total of seconds. This count starts at the Unix Epoch on January 1st, 1970 at UTC(Time Interval Since 1970).<br /><br />Timestamp Online is timestamp converver between unix timestamp and human readable form date. If you want to convert timestamp, it is sufficient to either enter your timestamp into input area.',
     'tsp_get_in_prog' => 'Get current timestamp in some programes',
     'tsp_in_swift' => 'Get timestamp in swift',
     'tsp_in_golang' => 'Get timestamp in Go lang',
