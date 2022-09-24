@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'জাভা ইউআরএল এনকোড / জাভা ইউআরএল ডিকোড', 
-    'json_head' => 'JSON ভিউয়ার / JSON বিউটিফায়ার', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'JSON বিন্যাসটি জাভাস্ক্রিপ্ট অবজেক্ট তৈরির কোডের সাথে সিনট্যাক্টিকভাবে অভিন্ন। এই মিলের কারণে, একটি জাভাস্ক্রিপ্ট প্রোগ্রাম সহজেই JSON ডেটাকে নেটিভ জাভাস্ক্রিপ্ট অবজেক্টে রূপান্তর করতে পারে। JSON সিনট্যাক্স জাভাস্ক্রিপ্ট অবজেক্ট নোটেশন সিনট্যাক্স থেকে উদ্ভূত, কিন্তু JSON বিন্যাস শুধুমাত্র পাঠ্য।', 
     'json_desc2' => 'একটি ট্রি ভিউ এবং প্লেইন টেক্সটে json পার্স করতে JSON এডিটর, Json ভিউয়ার, Json ভ্যালিডেটর, বৈধ json এবং Json ফর্ম্যাটার হিসাবে ব্যবহৃত ফ্রি JSON বিউটিফায়ারের টুলটিতে jsonlink jsonpretty ফাংশন রয়েছে।', 
     'json_in_js' => 'জাভাস্ক্রিপ্ট জেসন পার্স', 

@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'urlencode python / urldecode python', 
     'url_in_java' => 'codificação de url java / decodificação de url java', 
-    'json_head' => 'Visualizador JSON / Embelezador JSON', 
+    'json_head' => 'Visualizador JSON / Embelezador JSON / JSON Decode Online', 
     'json_desc1' => 'O formato JSON é sintaticamente idêntico ao código para criar objetos JavaScript. Devido a essa semelhança, um programa JavaScript pode facilmente converter dados JSON em objetos JavaScript nativos. A sintaxe JSON é derivada da sintaxe de notação de objeto JavaScript, mas o formato JSON é somente texto.', 
     'json_desc2' => 'A ferramenta JSON Beautifier gratuita usada como editor JSON, visualizador Json, Json Validator, json válido e formatador Json para analisar json em uma visualização em árvore e texto simples, possui funções jsonlink jsonpretty.', 
     'json_in_js' => 'javascript json analisar', 

@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'mã hóa url java / giải mã url java', 
-    'json_head' => 'Trình xem JSON / Trình làm đẹp JSON', 
+    'json_head' => 'Trình xem JSON / Trình làm đẹp JSON / JSON Decode Online', 
     'json_desc1' => 'Định dạng JSON giống về mặt cú pháp với mã để tạo các đối tượng JavaScript. Do sự giống nhau này, một chương trình JavaScript có thể dễ dàng chuyển đổi dữ liệu JSON thành các đối tượng JavaScript gốc. Cú pháp JSON có nguồn gốc từ cú pháp ký hiệu đối tượng JavaScript, nhưng định dạng JSON chỉ là văn bản.', 
     'json_desc2' => 'Công cụ JSON Beautifier miễn phí được sử dụng làm trình soạn thảo JSON, trình xem Json, Trình xác thực Json, trình định dạng json và Json hợp lệ để phân tích cú pháp json trong chế độ xem dạng cây và văn bản thuần túy, có các chức năng jsonlink jsonpretty.', 
     'json_in_js' => 'javascript json phân tích cú pháp', 

@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'kode urlen php / kode url php', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'enkode url java / dekode url java', 
-    'json_head' => 'Penampil JSON / Percantik JSON', 
+    'json_head' => 'Penampil JSON / Percantik JSON / JSON Decode Online', 
     'json_desc1' => 'Format JSON secara sintaksis identik dengan kode untuk membuat objek JavaScript. Karena kesamaan ini, program JavaScript dapat dengan mudah mengubah data JSON menjadi objek JavaScript asli. Sintaks JSON diturunkan dari sintaks notasi objek JavaScript, tetapi format JSON hanya berupa teks.', 
     'json_desc2' => 'Alat JSON Beautifier gratis yang digunakan sebagai editor JSON, penampil Json, Validator Json, formatter json dan Json yang valid untuk mengurai json dalam tampilan hierarki dan teks biasa, memiliki fungsi jsonlink jsonpretty.', 
     'json_in_js' => 'parse javascript json', 

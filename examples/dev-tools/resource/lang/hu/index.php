@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'java url kódolás / java url dekódolás', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'A JSON formátum szintaktikailag megegyezik a JavaScript objektumok létrehozásához használt kóddal. E hasonlóság miatt a JavaScript-programok könnyen konvertálhatják a JSON-adatokat natív JavaScript-objektumokká. A JSON szintaxis a JavaScript objektum jelölési szintaxisából származik, de a JSON formátum csak szöveg.', 
     'json_desc2' => 'Az ingyenes JSON Beautifier eszköz, amelyet JSON-szerkesztőként, Json-nézegetőként, Json-ellenőrzőként, érvényes json- és Json-formázóként használnak a JSON fanézetben és egyszerű szövegben történő elemzéséhez, jsonlink jsonpretty funkciókkal rendelkezik.', 
     'json_in_js' => 'javascript json elemzés', 

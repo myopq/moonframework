@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldcode', 
     'url_in_py' => 'python urlencode / python urldcode', 
     'url_in_java' => 'java url encode / java url decode', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'Η μορφή JSON είναι συντακτικά πανομοιότυπη με τον κώδικα για τη δημιουργία αντικειμένων JavaScript. Λόγω αυτής της ομοιότητας, ένα πρόγραμμα JavaScript μπορεί εύκολα να μετατρέψει δεδομένα JSON σε εγγενή αντικείμενα JavaScript. Η σύνταξη JSON προέρχεται από τη σύνταξη σημειογραφίας αντικειμένου JavaScript, αλλά η μορφή JSON είναι μόνο κείμενο.', 
     'json_desc2' => 'Το δωρεάν εργαλείο JSON Beautifier που χρησιμοποιείται ως πρόγραμμα επεξεργασίας JSON, πρόγραμμα προβολής Json, Json Validator, έγκυρο json και μορφοποιητής Json για την ανάλυση του json σε προβολή δέντρου και απλό κείμενο, έχει λειτουργίες jsonlink jsonpretty.', 
     'json_in_js' => 'javascript json ανάλυση', 

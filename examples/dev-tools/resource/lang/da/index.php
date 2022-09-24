@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'java url encode / java url decode', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'JSON-formatet er syntaktisk identisk med koden til oprettelse af JavaScript-objekter. På grund af denne lighed kan et JavaScript-program nemt konvertere JSON-data til native JavaScript-objekter. JSON-syntaksen er afledt af JavaScript-objektnotationssyntaks, men JSON-formatet er kun tekst.', 
     'json_desc2' => 'Det gratis JSON Beautifier-værktøj, der bruges som JSON editor, Json viewer, Json Validator, valid json og Json formatter til at parse json i en trævisning og almindelig tekst, har jsonlink jsonpretty-funktioner.', 
     'json_in_js' => 'javascript json parse', 

@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'java url kodlaması / java url kodunu çözme', 
-    'json_head' => 'JSON Görüntüleyici / JSON Güzelleştirici', 
+    'json_head' => 'JSON Görüntüleyici / JSON Güzelleştirici / JSON Decode Online', 
     'json_desc1' => 'JSON biçimi, JavaScript nesneleri oluşturma koduyla sözdizimsel olarak aynıdır. Bu benzerlik nedeniyle, bir JavaScript programı JSON verilerini kolayca yerel JavaScript nesnelerine dönüştürebilir. JSON sözdizimi, JavaScript nesne gösterimi sözdiziminden türetilmiştir, ancak JSON biçimi yalnızca metindir.', 
     'json_desc2' => 'JSON düzenleyici, Json görüntüleyici, Json Validator, geçerli json ve Json biçimlendirici olarak json\'u bir ağaç görünümünde ve düz metinde ayrıştırmak için kullanılan ücretsiz JSON Güzelleştirici aracı, jsonlink jsonpretty işlevlerine sahiptir.', 
     'json_in_js' => 'javascript json ayrıştırma', 

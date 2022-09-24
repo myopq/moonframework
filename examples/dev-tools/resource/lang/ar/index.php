@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'بيثون urlencode / python urldecode', 
     'url_in_java' => 'java url ترميز / فك شفرة java url', 
-    'json_head' => 'عارض JSON / جهاز تجميل JSON', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'تنسيق JSON مطابق من الناحية التركيبية للكود الخاص بإنشاء كائنات JavaScript. بسبب هذا التشابه ، يمكن لبرنامج JavaScript تحويل بيانات JSON بسهولة إلى كائنات JavaScript أصلية. يُشتق بناء جملة JSON من بناء جملة تدوين كائن JavaScript ، لكن تنسيق JSON هو نص فقط.', 
     'json_desc2' => 'أداة JSON Beautifier المجانية المستخدمة كمحرر JSON وعارض Json و Json Validator ومنسق json و Json صالح لتحليل json في عرض الشجرة والنص العادي ، لها وظائف jsonlink jsonpretty.', 
     'json_in_js' => 'جافا سكريبت json تحليل', 

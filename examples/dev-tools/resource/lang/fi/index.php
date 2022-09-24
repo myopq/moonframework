@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'java url -koodaus / java url -koodaus', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'JSON-muoto on syntaktisesti identtinen JavaScript-objektien luomiseen käytettävän koodin kanssa. Tämän samankaltaisuuden vuoksi JavaScript-ohjelma voi helposti muuntaa JSON-tiedot alkuperäisiksi JavaScript-objekteiksi. JSON-syntaksi on johdettu JavaScript-objektin merkintäsyntaksista, mutta JSON-muoto on vain tekstiä.', 
     'json_desc2' => 'Ilmaisessa JSON Beautifier -työkalussa, jota käytetään JSON-editorina, Json-katseluohjelmana, Json Validatorina, kelvollisena json- ja Json-muotoilijana jsonin jäsentämiseen puunäkymässä ja pelkkää tekstiä, on jsonlink jsonpretty -toimintoja.', 
     'json_in_js' => 'javascript json jäsentää', 

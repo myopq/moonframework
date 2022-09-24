@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'קידוד כתובת אתר של java / פענוח כתובת אתר של java', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => ' JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'פורמט JSON זהה מבחינה תחבירית לקוד ליצירת אובייקטי JavaScript. בגלל הדמיון הזה, תוכנית JavaScript יכולה להמיר בקלות נתוני JSON לאובייקטים מקוריים של JavaScript. תחביר JSON נגזר מתחביר סימון אובייקט JavaScript, אך פורמט JSON הוא טקסט בלבד.', 
     'json_desc2' => 'לכלי ה-JSON Beautifier החינמי המשמש כעורך JSON, Json viewer, Json Validator, json ו-Json פורמט חוקי לניתוח json בתצוגת עץ וטקסט רגיל, יש פונקציות jsonlink jsonpretty.', 
     'json_in_js' => 'javascript json לנתח', 

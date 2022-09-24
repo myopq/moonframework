@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'java url кодиране / java url декодиране', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'Форматът JSON е синтактично идентичен с кода за създаване на JavaScript обекти. Поради това сходство една JavaScript програма може лесно да конвертира JSON данни в собствени JavaScript обекти. Синтаксисът на JSON е извлечен от синтаксиса на нотация на обект на JavaScript, но форматът JSON е само текстов.', 
     'json_desc2' => 'Безплатният инструмент JSON Beautifier, използван като JSON редактор, Json Viewer, Json Validator, валиден json и Json форматиращ инструмент за анализиране на json в дървовиден изглед и обикновен текст, има функции jsonlink jsonpretty.', 
     'json_in_js' => 'javascript json анализ', 

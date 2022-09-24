@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'เข้ารหัส java url / ถอดรหัส java url', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'รูปแบบ JSON จะเหมือนกับโค้ดสำหรับสร้างออบเจกต์ JavaScript เนื่องจากความคล้ายคลึงกันนี้ โปรแกรม JavaScript สามารถแปลงข้อมูล JSON เป็นวัตถุ JavaScript ดั้งเดิมได้อย่างง่ายดาย ไวยากรณ์ JSON ได้มาจากไวยากรณ์สัญกรณ์วัตถุ JavaScript แต่รูปแบบ JSON เป็นข้อความเท่านั้น', 
     'json_desc2' => 'เครื่องมือ JSON Beautifier ฟรีที่ใช้เป็นตัวแก้ไข JSON, Json viewer, Json Validator, ตัวจัดรูปแบบ json และ Json ที่ถูกต้องเพื่อแยกวิเคราะห์ json ในมุมมองแบบต้นไม้และข้อความล้วน มีฟังก์ชัน jsonlink jsonpretty', 
     'json_in_js' => 'javascript json parse', 

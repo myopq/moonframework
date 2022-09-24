@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'php urlencode / php urldecode', 
     'url_in_py' => 'python urlencode / python urldecode', 
     'url_in_java' => 'Java URL エンコード / Java URL デコード', 
-    'json_head' => 'JSON Viewer / JSON Beautifier', 
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online', 
     'json_desc1' => 'JSON 形式は、JavaScript オブジェクトを作成するためのコードと構文的に同じです。この類似性により、JavaScript プログラムは JSON データをネイティブ JavaScript オブジェクトに簡単に変換できます。 JSON 構文は JavaScript オブジェクト表記構文から派生していますが、JSON 形式はテキストのみです。', 
     'json_desc2' => '無料の JSON Beautifier ツールは、JSON エディター、Json ビューアー、Json バリデーター、有効な json および Json フォーマッターとして使用され、ツリー ビューとプレーン テキストで json を解析し、jsonlink jsonpretty 関数を備えています。', 
     'json_in_js' => 'javascript json パース', 

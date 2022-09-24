@@ -48,7 +48,7 @@ return[
     'url_in_php' => 'PHP URL 코드 / PHP URL 코드', 
     'url_in_py' => '파이썬 urlencode / 파이썬 urldecode', 
     'url_in_java' => '자바 URL 인코딩 / 자바 URL 디코딩', 
-    'json_head' => 'JSON 뷰어 / JSON 미화', 
+    'json_head' => 'JSON 뷰어 / JSON 미화 / JSON Decode Online', 
     'json_desc1' => 'JSON 형식은 JavaScript 객체를 생성하기 위한 코드와 구문적으로 동일합니다. 이러한 유사성 때문에 JavaScript 프로그램은 JSON 데이터를 기본 JavaScript 개체로 쉽게 변환할 수 있습니다. JSON 구문은 JavaScript 객체 표기법 구문에서 파생되지만 JSON 형식은 텍스트 전용입니다.', 
     'json_desc2' => 'JSON 편집기, Json 뷰어, Json Validator, 유효한 json 및 Json 포맷터로 사용되는 무료 JSON Beautifier 도구는 jsonlink jsonpretty 기능을 가지고 있습니다.', 
     'json_in_js' => '자바 스크립트 json 구문 분석', 

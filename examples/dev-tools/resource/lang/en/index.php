@@ -59,9 +59,9 @@ return [
     'url_in_java' => 'java url encode / java url decode',
     
     // section json
-    'json_head' => 'JSON Viewer / JSON Beautifier',
+    'json_head' => 'JSON Viewer / JSON Beautifier / JSON Decode Online',
     'json_desc1' => 'The JSON format is syntactically identical to the code for creating JavaScript objects. Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects. The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only.',
-    'json_desc2' => 'The free JSON Beautifier tool used as JSON editor, Json viewer, Json Validator, valid json and Json formatter to parse json in a tree view and plain text, have jsonlink jsonpretty functions.',
+    'json_desc2' => 'The free JSON Beautifier tool used as JSON editor, Json viewer, Json Validator, JSON Decode Online, valid json and Json formatter to parse json in a tree view and plain text, have jsonlink jsonpretty functions.',
     'json_in_js' => 'javascript json parse',
     'json_in_py_dump' => 'python json dump',
     'json_in_py_load' => 'python json loads &amp; python parse json',
