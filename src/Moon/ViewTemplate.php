@@ -14,6 +14,9 @@ class ViewTemplate {
 
     private $themes = "default";
     private $cacheDir = "";
+	private $file = "";
+	private $cssModules = [];
+	private $phpcode = [];
 
 
     function __construct()
