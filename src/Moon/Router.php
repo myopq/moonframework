@@ -21,15 +21,24 @@ class Router {
     const POST = "POST";
 
     private array $routes = [];
-    private array $routeGroups = [];
+    private array $routesRegex = ['GET' => [], 'POST' => []];
+    private array $routeGroups = ['GET' => [], 'POST' => []];
 
     public function instance() {
         return $this;
     }
     
     public function get(string $uri, string $action): Router {
-        $path = $this->getPath($uri);
-        $this->routes[self::GET][$path] = $action;
+        $pathInfo = $this->getPath($uri);
+        if ($pathInfo['type'] == RouteMatchMode::EQUAL) {
+            $this->routes[self::GET][$pathInfo['path']] = $action;
+        } elseif ($pathInfo['type'] == RouteMatchMode::REGEX) {
+            $this->routesRegex[self::GET][] = [
+                'regex' => $pathInfo['path'],
+                'params' => $pathInfo['params'],
+                'action' => $action,
+            ];
+        }
 
         return $this;
     }
@@ -63,8 +72,8 @@ class Router {
     }
 
     public function dispatch() {
-        $action = $this->matchRequest();
-        $actionInfo = $this->parseAction($action);
+        $machedResult = $this->matchRequest();
+        $actionInfo = $this->parseAction($machedResult->action);
         $class = $actionInfo['class'];
         $method = $actionInfo['method'];
 
@@ -73,6 +82,7 @@ class Router {
         }
 
         $httpRequest = new HttpRequest($class, $method);
+        $httpRequest->setParams($machedResult->params);
         $controller = new $class($httpRequest);
         $controller->$method($httpRequest);
     }
@@ -80,26 +90,50 @@ class Router {
     private function getPath(string $uri) {
         $uri = ltrim($uri, '/');
         $path = '/';
-        if (!empty($this->routeGroups)) {
-            $path .= implode('/', array_column($this->routeGroups, 'prefix')) . '/';
-        }
+        // if (!empty($this->routeGroups)) {
+        //     $path .= implode('/', array_column($this->routeGroups, 'prefix')) . '/';
+        // }
         $path .= $uri;
+        if (strpos($path, '{') !== false) {
+            $ret['type'] = RouteMatchMode::REGEX;
+            $ret['path'] = preg_replace('/\{(.*?)\}/', '([a-zA-Z0-9\-_]+?)', $path);
+            $ret['path'] = str_replace('/', '\\/', $ret['path']);
+            $isMatched = preg_match_all('/\{(.*?)\}/', $path, $matches);
+            if (!$isMatched) {
+                throw new \Exception("Route Rule Error: {$uri}", 1);
+            }
+            $ret['params'] = $matches[1];
+        } else {
+            $ret['type'] = RouteMatchMode::EQUAL;
+            $ret['path'] = $path;
+        }
 
-        return $path;
+        return $ret;
     }
 
     private function matchRequest() {
         $requestUri = $_SERVER['REQUEST_URI'];
         $requestMethod = $_SERVER['REQUEST_METHOD'];
-
-        if (empty($this->routes[$requestMethod])) {
-            throw new HttpException(code:404);
+        $tmp = parse_url($requestUri);
+        $requestPath = $tmp['path'] ?? '';
+        
+        // 如果有完全匹配的，就直接返回
+        if (!empty($this->routes[$requestMethod][$requestPath])) {
+            return new MatchedRequestResult($this->routes[$requestMethod][$requestPath]);
         }
-        if (empty($this->routes[$requestMethod][$requestUri])) {
-            throw new HttpException(code:404);
-        }
 
-        return $this->routes[$requestMethod][$requestUri];
+        // 如果有正则路由，则进行匹配
+        foreach ($this->routesRegex[$requestMethod] as $route) {
+            if (preg_match('/^' . $route['regex'] . '$/', $requestPath, $matches)) {
+                $params = [];
+                foreach ($route['params'] as $key => $value) {
+                    $params[$value] = $matches[$key + 1];
+                }
+                return new MatchedRequestResult($route['action'], $params);
+            }
+        }
+        
+        throw new HttpException(code:404);
     }
 
     private function parseAction($action) {
@@ -120,5 +154,14 @@ class Router {
         }
 
         return $result;
+    }
+}
+
+class MatchedRequestResult {
+    public string $action;
+    public array $params;
+    public function __construct(string $action, array $params = []) {
+        $this->action = $action;
+        $this->params = $params;
     }
 }

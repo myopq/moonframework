@@ -52,7 +52,7 @@ class DB {
 
         $db_type = substr($config['dbdsn'], 0, strpos($config['dbdsn'], ':'));
 
-        $pdo_class_name = "db_" . $db_type;
+        $pdo_class_name = "Moon\\Db" . $db_type;
         if (!array_key_exists($db_type, self::$required_drivers)) {
             self::$required_drivers[$db_type] = true;
         }
@@ -90,8 +90,8 @@ class DB {
         return self::$dbs[self::$cur_db]->result_first($sql, $args);
     }
 
-    public static function insert($table, $data, $batch = false, $replace = false) {
-        return self::$dbs[self::$cur_db]->insert($table, $data, $batch, $replace);
+    public static function insert($table, $data, $batch = false, $replace = false, $ignore = false) {
+        return self::$dbs[self::$cur_db]->insert($table, $data, $batch, $replace, $ignore);
     }
 
     public static function update($table, $data, $condition, $condition_args) {

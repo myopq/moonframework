@@ -39,4 +39,14 @@ class HttpController {
         // $cacheFile = template_cache_path($themes.'/'.str_replace('/', '_', $tplFile).'.tpl.php');
         include template($tplFile);
     }
+
+    function json($data, $code = 0, $msg = 'success') {
+        header('Content-Type:application/json; charset=utf-8');
+        echo json_encode([
+            'code' => $code,
+            'msg' => $msg,
+            'data' => $data
+        ]);
+        exit;
+    }
 }

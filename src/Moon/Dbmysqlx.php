@@ -2,7 +2,9 @@
 declare(strict_types=1);
 namespace Moon;
 
-class DbMySQL {
+use PDO;
+
+class Dbmysql {
     private $querynum = 0;
     private $config = array();
     private $sqldebug = array();
@@ -25,7 +27,7 @@ class DbMySQL {
 
     public function connect() {
         $this->pdo = new PDO(
-            $this->config['dbdsn'], 
+            $this->config['dbdsn'],
             $this->config['dbuser'],
             $this->config['dbpwd'],
             array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4')
@@ -87,12 +89,15 @@ class DbMySQL {
         return $this->execute($sql, $condition_args);
     }
 
-    public function insert($table, $data, $batch = false, $replace = false) {
+    public function insert($table, $data, $batch = false, $replace = false, $ignore = false) {
         $sql = '';
         if ($replace) {
             $cmd = 'replace';
         }else{
             $cmd = 'insert';
+        }
+        if ($ignore) {
+            $cmd .= ' ignore';
         }
         // 如果是一个空插入，单独处理
         if (empty($data)) {
